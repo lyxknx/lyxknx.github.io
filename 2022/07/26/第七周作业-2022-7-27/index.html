@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="背景：报全程班和单就业的小伙伴，本周建议学习内容：第二十七天、第二十八天、第二十九天、第三十天。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第七周作业-2022-7-27">
+<meta property="og:url" content="http://example.com/2022/07/26/%E7%AC%AC%E4%B8%83%E5%91%A8%E4%BD%9C%E4%B8%9A-2022-7-27/index.html">
+<meta property="og:site_name" content="5-12 23:30">
+<meta property="og:description" content="背景：报全程班和单就业的小伙伴，本周建议学习内容：第二十七天、第二十八天、第二十九天、第三十天。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/07/26/%E7%AC%AC%E4%B8%83%E5%91%A8%E4%BD%9C%E4%B8%9A-2022-7-27/image-20220814225533528.png">
+<meta property="article:published_time" content="2022-07-26T22:14:16.000Z">
+<meta property="article:modified_time" content="2022-08-14T15:06:13.603Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="ANSIBLE运维自动化以及http协议">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2022/07/26/%E7%AC%AC%E4%B8%83%E5%91%A8%E4%BD%9C%E4%B8%9A-2022-7-27/image-20220814225533528.png">
+  
+  
+  <title>第七周作业-2022-7-27 - 5-12 23:30</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="第七周作业-2022-7-27">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-26 22:14" pubdate>
+        July 26, 2022 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      11k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      93 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">第七周作业-2022-7-27</h1>
+            
+            <div class="markdown-body">
+              <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>：报全程班和单就业的小伙伴，本周建议学习内容：第二十七天、第二十八天、第二十九天、第三十天。</p>
+<span id="more"></span>
+
+<p>请同学们完成作业后，将博客作业提交到此链接：<a target="_blank" rel="noopener" href="https://www.wjx.top/vj/POHTQOH.aspx">https://www.wjx.top/vj/POHTQOH.aspx</a></p>
+<h1 id="章节内容"><a href="#章节内容" class="headerlink" title="章节内容"></a>章节内容</h1><p>第二十七天：<br>ANSIBLE运维自动化<br>1、实现PXC集群和压力测试<br>2、自动化运维及运维环境介绍<br>3、ansible的架构和相关文件<br>4、ansible基本工具使用<br>5、ansible常用模块<br>6、ansible常用模块和YAML语言<br>7、playbook实现常用组件和基本格式”<br>“第二十八天：<br>Http协议和Web服务器Apache<br>1、playbook的高级用法<br>2、playbook的高级用法关于变量<br>3、playbook的高级用法变量<br>4、playbook的高级用法迭代和条件判断<br>5、playbook的高级用法<br>6、ansible的企业级应用role<br>7、http和相关技术”<br>“第二十九天：<br>Http协议和Web服务器Apache2<br>1、Http协议各种版本详解<br>2、Http协议的工作过程和Httpd的MPM工作模式<br>3、Httpd安装和配置文件格式介绍<br>4、Httpd常见配置<br>5、Httpd常见配置<br>6、Httpd常见配置<br>7、http的报文结构和常见响应码”<br>“第三十天：<br>http协议和web服务器<br>1http的cookie和session详解<br>2LAMP架构和CGI与FASTCGI区别<br>3常见PHP的配置和php程序<br>4LAMP各种常见应用<br>5基于opcache加速LAMP<br>6实现基于FACTCGI的LAMP架构<br>7编译安装基于”</p>
+<h1 id="作业："><a href="#作业：" class="headerlink" title="作业："></a>作业：</h1><h2 id="1、说明自动化运维的路径，原理，实践方法，"><a href="#1、说明自动化运维的路径，原理，实践方法，" class="headerlink" title="1、说明自动化运维的路径，原理，实践方法，"></a>1、说明自动化运维的路径，原理，实践方法，</h2><h3 id="互联网运维职业发展路线："><a href="#互联网运维职业发展路线：" class="headerlink" title="互联网运维职业发展路线："></a>互联网运维职业发展路线：</h3><figure class="highlight markdown"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-code">	运维的发展可分为以下几个阶段：手工管理阶段，工具批量操作阶段，平台管理阶段，系统自调度阶段。对应的运维职业发展路线为：基础运维→监控运维→系统运维→应用运维→自动化运维→架构师→总监或CTO。</span><br><span class="hljs-code"></span><br>​	即对于运维人员来说，首先需要掌握服务器的基础系统管理命令，服务器运行关键性能指标的监控，掌握日常重复性操作的脚本编写；在打好基础后熟悉各种应用的部署和维护工作，根据业务情况为其搭建或扩建适合的配套架构；在拥有以上实践经验后，则可以通过自动化运维工具完成大规模主机的日常管理维护工作，若拥有开发能力还可以集成日常运维工具开发运维平台。在熟悉大型架构、具有丰富运维经验后掌握完整架构的设计搭建和优化，往架构师发展。<br><br>​	运维的发展过程可简要概括为：从运维工作的服务部署、维护和监控依赖于人工完成转变为自动化工具或使用运维平台完成，在发生故障后交由自动故障处理软件分析，加快恢复速度。<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="自动化运维的原理和实践方法"><a href="#自动化运维的原理和实践方法" class="headerlink" title="自动化运维的原理和实践方法"></a>自动化运维的原理和实践方法</h3><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs lasso">在实际生产中，公司内部的主机集群可大致分为DEV开发环境、测试环境、预发布环境、发布环境、生产环境、灰度环境。<br><br>​	若某个环境的需求增加多台主机，需要安装系统，则可使用基于PXE的Cobbler来实现自动化部署系统。<br><br>​	开发环境和测试环境完成某项目的更新，需要更新应用项目的新版本，可以使用Jenkins和GItlab实现持续集成与持续部署平台。<br><br>​	生产环境主机数量最多，且运行大量重要应用，对外提供服务。因此需要借助Ansible或Saltstack等自动化运维工具，以更安全高效的形式自动完成日常管理、软件部署、配置修改、安全加固等工作。为了实时监控生产环境架构中的多个集群服务器，使用Zabbix、Prometheus等监控软件实现分布式检验平台。对于多种软件产生的海量日志，可使用Elastic <span class="hljs-built_in">Stack</span>进行日志统一收集与展示。<br><br>​	关于以上自动化运维所需工具的架构需要根据业务要求选择搭建。<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、搭建pxc集群"><a href="#2、搭建pxc集群" class="headerlink" title="2、搭建pxc集群"></a>2、搭建pxc集群</h2><p>在之前的Mysql集群架构文章中，演示了多主架构，其具有容易数据不一致、同时进行某一操作会互相锁死的问题。而PXC架构则即具有多主架构的特点，又通过特殊的机制解决了上述问题。</p>
+<p>PXC的特点</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">	全称Percona Xtradb <span class="hljs-keyword">Cluster</span>，是Galera Cluste方案的一种版本，与MariaDB <span class="hljs-keyword">Cluster</span>类似。Galera本身是具有多主特性的，即采用multi-master的集群架构，是一个既稳健，又在数据一致性、完整性及高性能方面有出色表现的高可用解决方案。<br><br>​	Galera <span class="hljs-keyword">Cluster</span>的优点有：实现多节点读写，节点间无延迟同步复制，故障切换方便，热插拔，自动克隆数据使新增节点或有节点停机时不需要人工备份。<br><br>​	缺点：为了防止冲突，使用DDL语句时需要全局验证，集群性能由集群中最差性能节点决定。全量拷贝数据时，提供数据的donor节点无法对外提供读写服务。<br></code></pre></td></tr></table></figure>
+
+<h3 id="搭建PXC集群"><a href="#搭建PXC集群" class="headerlink" title="搭建PXC集群"></a>搭建PXC集群</h3><p>​    使用软件版本：Percona XtraDB Cluster 5.7 （不支持CentOS8，与Mysql不兼容）</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">#若yum源中没有该软件，可添加国内镜像站点percona路径<br>#分别在3台主机上安装<br>[root@localhost ~]$yum install Percona-XtraDB-Cluster-57 -y<br><br>#修改配置文件<br>#位置/etc/percona-xtradb-cluster.conf.d   /etc/my.cnf<br>[root@localhost ~]$ls /etc/percona-xtradb-cluster.conf.d<br>mysqld.cnf  mysqld_safe.cnf  wsrep.cnf<br><br>#第一个节点<br>[root@localhost ~]$vim /etc/percona-xtradb-cluster.conf.d/wsrep.cnf<br>#添加集群节点<br>wsrep<span class="hljs-emphasis">_cluster_address=gcomm://10.0.0.152,10.0.0.154,10.0.0.155 </span><br><span class="hljs-emphasis">#指定当前节点IP</span><br><span class="hljs-emphasis">wsrep_node_address=10.0.0.152</span><br><span class="hljs-emphasis">#在SST传输时需要用到的认证凭据，格式为：&quot;用户：密码&quot;，实际使用时需要修改为更安全的密码</span><br><span class="hljs-emphasis">wsrep_sst_auth=&quot;sstuser:s3cretPass&quot;</span><br><span class="hljs-emphasis">#当前节点名 If wsrep_node_name is not specified,  then system hostname will be used</span><br><span class="hljs-emphasis">wsrep_node_</span>name=pxc-cluster-node-n67024<br><br>#第二个节点 未提及则同上<br>wsrep<span class="hljs-emphasis">_node_address=10.0.0.154</span><br><span class="hljs-emphasis">wsrep_node_</span>name=pxc-cluster-node-n67025<br><br>#第三个节点<br>wsrep<span class="hljs-emphasis">_node_address=10.0.0.155</span><br><span class="hljs-emphasis">wsrep_node_</span>name=pxc-cluster-node-n67026<br><br><br>#启动<br>[root@localhost ~]$systemctl enable --now mysql@bootstrap.service<br>#通过4567端口进行集群内节点间连接，通过3306端口对外服务<br>[root@localhost ~]$ss -ntul<br>Netid State      Recv-Q Send-Q                         Local Address:Port                                        Peer Address:Port              <br><span class="hljs-code">    </span><br>tcp   LISTEN     0      128                                        <span class="hljs-strong">*:4567                                                   *:*</span>                  <br><span class="hljs-code">                  </span><br>tcp   LISTEN     0      80                                      [::]:3306                                                [::]:*                  <br><br>#设置密码<br>#使用临时密码登录<br>[root@localhost ~]$grep &quot;temporary password&quot; /var/log/mysqld.log<br>2022-07-26T07:06:53.895451Z 1 [Note] A temporary password is generated for root@localhost: 4&amp;g<span class="hljs-strong">*HTiU*xkd</span><br><span class="hljs-strong">[root@localhost ~]$mysql -uroot -p&#x27;4&amp;g*HTiU*xkd&#x27;</span><br><span class="hljs-strong">mysql&gt; alter user root@localhost identified by &quot;12345&quot;;</span><br><span class="hljs-strong">#创建SST传输用户账号，并授权</span><br><span class="hljs-strong">mysql&gt; create user &#x27;sstuser&#x27;@&#x27;localhost&#x27; identified by &#x27;s3cretPass&#x27;;</span><br><span class="hljs-strong">mysql&gt; grant all on *.*</span> to sstuser@localhost;<br><br>#可通过变量信息查看当前节点状态<br>mysql&gt; show status like <span class="hljs-emphasis">&#x27;wsrep%&#x27;</span>;<br>#查看SST是否完成，若为Joiner，则不可以加新节点<br>| wsrep<span class="hljs-emphasis">_local_state_comment | Synced                               |</span><br><span class="hljs-emphasis">#集群规模</span><br><span class="hljs-emphasis">| wsrep_cluster_size         | 1                                   |</span><br><span class="hljs-emphasis">#是否已完全连接</span><br><span class="hljs-emphasis">| wsrep_cluster_</span>status       | Primary                             |<br><br>#其他节点上启动集群<br>[root@localhost ~]$systemctl start mysql<br>#可观察到规模变化<br>mysql&gt; show status like <span class="hljs-emphasis">&#x27;wsrep%&#x27;</span>;<br>| wsrep<span class="hljs-emphasis">_cluster_size               | 2                                    |</span><br><span class="hljs-emphasis">mysql&gt; show status like &#x27;wsrep%&#x27;;</span><br><span class="hljs-emphasis">| wsrep_cluster_</span>size               | 3                                    |<br><br>#节点1<br><span class="hljs-section">mysql&gt;  SHOW VARIABLES LIKE &#x27;wsrep_node_name&#x27;;</span><br><span class="hljs-section">+-----------------+-------------------------+</span><br><span class="hljs-section">| Variable_name   | Value                   |</span><br><span class="hljs-section">+-----------------+-------------------------+</span><br><span class="hljs-section">| wsrep_node_name | pxc-cluster-node-n67024 |</span><br><span class="hljs-section">+-----------------+-------------------------+</span><br><span class="hljs-section">mysql&gt;  SHOW VARIABLES LIKE &#x27;wsrep_node_address&#x27;;</span><br><span class="hljs-section">+--------------------+------------+</span><br><span class="hljs-section">| Variable_name      | Value      |</span><br><span class="hljs-section">+--------------------+------------+</span><br><span class="hljs-section">| wsrep_node_address | 10.0.0.152 |</span><br><span class="hljs-section">+--------------------+------------+</span><br>#节点2<br>[root@localhost ~]$mysql -uroot -p12345<br><span class="hljs-section">mysql&gt; SHOW VARIABLES LIKE &#x27;wsrep_node_name&#x27;;</span><br><span class="hljs-section">+-----------------+---------------------------+</span><br><span class="hljs-section">| Variable_name   | Value                     |</span><br><span class="hljs-section">+-----------------+---------------------------+</span><br><span class="hljs-section">| wsrep_node_name | pxc-cluster-node-1-n67025 |</span><br><span class="hljs-section">+-----------------+---------------------------+</span><br><span class="hljs-section">mysql&gt; SHOW VARIABLES LIKE &#x27;wsrep_node_address&#x27;;</span><br><span class="hljs-section">+--------------------+------------+</span><br><span class="hljs-section">| Variable_name      | Value      |</span><br><span class="hljs-section">+--------------------+------------+</span><br><span class="hljs-section">| wsrep_node_address | 10.0.0.154 |</span><br><span class="hljs-section">+--------------------+------------+</span><br>#节点3<br>[root@localhost ~]$mysql -uroot -p12345<br><span class="hljs-section">mysql&gt; SHOW VARIABLES LIKE &#x27;wsrep_node_name&#x27;;</span><br><span class="hljs-section">+-----------------+---------------------------+</span><br><span class="hljs-section">| Variable_name   | Value                     |</span><br><span class="hljs-section">+-----------------+---------------------------+</span><br><span class="hljs-section">| wsrep_node_name | pxc-cluster-node-1-n67026 |</span><br><span class="hljs-section">+-----------------+---------------------------+</span><br><span class="hljs-section">mysql&gt; SHOW VARIABLES LIKE &#x27;wsrep_node_address&#x27;;</span><br><span class="hljs-section">+--------------------+------------+</span><br><span class="hljs-section">| Variable_name      | Value      |</span><br><span class="hljs-section">+--------------------+------------+</span><br><span class="hljs-section">| wsrep_node_address | 10.0.0.155 |</span><br><span class="hljs-section">+--------------------+------------+</span><br></code></pre></td></tr></table></figure>
+
+<p>验证：</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">测试是否均可读写：<br><span class="hljs-comment">#节点1</span><br>mysql&gt; show databases;<br>+--------------------+<br>|<span class="hljs-string"> Database           </span>|<br>+--------------------+<br>|<span class="hljs-string"> information_schema </span>|<br>|<span class="hljs-string"> mysql              </span>|<br>|<span class="hljs-string"> performance_schema </span>|<br>|<span class="hljs-string"> sys                </span>|<br>+--------------------+<br>mysql&gt; create database test;<br><span class="hljs-comment">#节点2</span><br>mysql&gt; show databases;<br>+--------------------+<br>|<span class="hljs-string"> Database           </span>|<br>+--------------------+<br>|<span class="hljs-string"> information_schema </span>|<br>|<span class="hljs-string"> mysql              </span>|<br>|<span class="hljs-string"> performance_schema </span>|<br>|<span class="hljs-string"> sys                </span>|<br>|<span class="hljs-string"> test               </span>|<br>+--------------------+<br>mysql&gt; create database test2;<br><span class="hljs-comment">#节点3</span><br>mysql&gt; show databases;<br>+--------------------+<br>|<span class="hljs-string"> Database           </span>|<br>+--------------------+<br>|<span class="hljs-string"> information_schema </span>|<br>|<span class="hljs-string"> mysql              </span>|<br>|<span class="hljs-string"> performance_schema </span>|<br>|<span class="hljs-string"> sys                </span>|<br>|<span class="hljs-string"> test               </span>|<br>|<span class="hljs-string"> test2              </span>|<br>+--------------------+<br>mysql&gt; create database test3;<br><span class="hljs-comment">#节点1</span><br>mysql&gt; show databases;<br>+--------------------+<br>|<span class="hljs-string"> Database           </span>|<br>+--------------------+<br>|<span class="hljs-string"> information_schema </span>|<br>|<span class="hljs-string"> mysql              </span>|<br>|<span class="hljs-string"> performance_schema </span>|<br>|<span class="hljs-string"> sys                </span>|<br>|<span class="hljs-string"> test               </span>|<br>|<span class="hljs-string"> test2              </span>|<br>|<span class="hljs-string"> test3              </span>|<br>+--------------------+<br><br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs subunit">测试同时输入相同操作是否产生冲突：<br>在控制终端中打开撰写栏，选择发送到所有会话<br><br>#第一个节点<br>mysql&gt; create database test4;<br><span class="hljs-keyword">ERROR </span>1007 (HY000): Can&#x27;t create database &#x27;test4&#x27;; database exists<br>#第二个节点<br>mysql&gt; create database test4;<br>Query OK, 1 row affected (0.00 sec)<br>#第三个节点<br>mysql&gt; create database test4;<br><span class="hljs-keyword">ERROR </span>1007 (HY000): Can&#x27;t create database &#x27;test4&#x27;; database exists<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">数据库成功创建并且没有卡死，在三个节点上也能查看到test4数据库。说明PXC集群解决了多主架构的冲突问题。<br><br>​	若想要扩展新的节点也很简单，只要在新主机上安装并修改配置文件即可加入集群，需要注意由于Galare集群数据同步的特性将完全覆盖原有数据。<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、playbook常用模块总结；一个简单的playbook完成安装httpd服务。"><a href="#3、playbook常用模块总结；一个简单的playbook完成安装httpd服务。" class="headerlink" title="3、playbook常用模块总结；一个简单的playbook完成安装httpd服务。"></a>3、playbook常用模块总结；一个简单的playbook完成安装httpd服务。</h2><h3 id="playbook常用模块"><a href="#playbook常用模块" class="headerlink" title="playbook常用模块"></a>playbook常用模块</h3><p><strong>Ping模块： 测试受控主机SSH连接是否可行</strong></p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dos">ansible all -m <span class="hljs-built_in">ping</span><br><span class="hljs-built_in">Copy</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>Shell模块 ：在远端主机用shell执行命令，不具有幂等性，绝大多数命令可由专门模块完成，使用较少。</strong></p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">ansible websrvs -m <span class="hljs-keyword">shell</span><span class="language-bash"> -a <span class="hljs-string">&#x27;echo $HOSTNAME&#x27;</span></span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>Copy模块 ：从ansible服务器主控端复制文件到远程主机，默认覆盖 注意: src=file 如果是没指明路径,则为当前目录或当前目录下的files目录下的file文件</strong></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs vim">#如目标存在，默认覆盖，此处指定先备份<br>ansible websrvs -<span class="hljs-keyword">m</span> <span class="hljs-keyword">copy</span> -<span class="hljs-keyword">a</span> <span class="hljs-comment">&quot;src=/root/test1.sh dest=/tmp/test2.sh   owner=wang </span><br><span class="hljs-keyword">mode</span>=<span class="hljs-number">600</span> backup=yes<span class="hljs-comment">&quot;</span><br>#复制/etc/下的文件，不包括/etc/目录自身,注意/etc/后面有/<br>ansible websrvs -<span class="hljs-keyword">m</span> <span class="hljs-keyword">copy</span> -<span class="hljs-keyword">a</span> <span class="hljs-comment">&quot;src=/etc/ dest=/backup</span><br>Copy<br></code></pre></td></tr></table></figure>
+
+<p><strong>Get_url模块 : 用于将文件从http、https或ftp下载到被管理机节点上</strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ansible</span> websrvs -m get_url -a &#x27;url=http://nginx.org/download/nginx-<span class="hljs-number">1</span>.<span class="hljs-number">18</span>.<span class="hljs-number">0</span>.tar.gz dest=/usr/local/src/nginx.tar.gz&#x27;<br><span class="hljs-attribute">Copy</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>File 模块：相当于shell中文件管理命令，设置文件属性,创建软链接等</strong></p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs pf"><span class="hljs-comment">#state可指定创建目录或文件、删除、软连接等操作</span><br>ansible <span class="hljs-literal">all</span> -m file  -a &#x27;path=/data/test.txt <span class="hljs-keyword">state</span>=touch&#x27;<br><span class="hljs-comment">#创建软链接</span><br>ansible <span class="hljs-literal">all</span> -m file -a &#x27;src=/data/testfile path|dest|name=/data/testfile-link <span class="hljs-keyword">state</span>=link&#x27;<br>Copy<br></code></pre></td></tr></table></figure>
+
+<p><strong>stat 模块：检查文件或文件系统的状态</strong></p>
+<p>#<strong>返回值exists： 判断是否存在 isuid： 调用用户的ID与所有者ID是否匹配</strong></p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ansible</span> <span class="hljs-number">127.0.0.1</span> -m stat -a <span class="hljs-string">&#x27;path=/etc/passwd&#x27;</span><br>Copy<br></code></pre></td></tr></table></figure>
+
+<p><strong>Unarchive模块 ：解包解压缩 将ansible主机上的压缩包传到远程主机后解压缩至特定目录</strong><br><strong>Archive模块：打包压缩</strong><br><strong>#选项remote_src：和copy功能一样且互斥，yes表示在远程主机，不在ansible主机，no表示文件在ansible主机上</strong></p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stata">ansible websrvs -<span class="hljs-keyword">m</span> unarchive -a&#x27;src=https:<span class="hljs-comment">//releases.ansible.com/ansible/ansible-2.1.6.0-0.1.rc1.tar.gz dest=/data/   owner=root remote_src=yes&#x27;</span><br>ansible websrvs -<span class="hljs-keyword">m</span> archive  -a &#x27;path=/<span class="hljs-keyword">var</span>/<span class="hljs-keyword">log</span>/ dest=/data/<span class="hljs-keyword">log</span>.tar.bz2 <span class="hljs-keyword">format</span>=bz2 <br>owner=wang mode=0600&#x27;<br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>Cron模块 ：在远程主机创建定时任务</strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment">#创建任务</span><br><span class="hljs-attribute">ansible</span> <span class="hljs-number">10.0.0.8</span> -m cron -a &#x27;hour=<span class="hljs-number">2</span> minute=<span class="hljs-number">30</span> weekday=<span class="hljs-number">1</span>-<span class="hljs-number">5</span> name=<span class="hljs-string">&quot;backup mysql&quot;</span> job=/root/mysql_backup.sh&#x27; #删除任务<br><span class="hljs-attribute">ansible</span> websrvs -m cron -a <span class="hljs-string">&quot;name=&#x27;backup mysql&#x27; state=absent&quot;</span><br><span class="hljs-attribute">Copy</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>Yum/Apt模块： 可以安装、更新软件</strong></p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pf">ansible websrvs -m yum -a &#x27;name=httpd <span class="hljs-keyword">state</span>=present&#x27;  <span class="hljs-comment">#安装</span><br>ansible websrvs -m yum -a &#x27;name=* <span class="hljs-keyword">state</span>=lastest exclude=kernel*,foo*&#x27; <span class="hljs-comment">#升级除</span><br>kernel和foo开头以外的所有包<br>Copy<br></code></pre></td></tr></table></figure>
+
+<p><strong>yum_repository 模块： 生成yum仓库文件 ，将仓库文件中的关键信息用键值对的形式表示</strong></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment">#playbook中写法</span><br>范例：<br> tasks:<br><br>   - name: Add multiple repositories into the same file <br>     yum_repository:<br>      name: test<br>      description: EPEL YUM repo<br>      file: external_repos<br>      baseurl: https:<span class="hljs-regexp">//</span>download.fedoraproject.org<span class="hljs-regexp">/pub/</span>epel<span class="hljs-regexp">/$releasever/</span><span class="hljs-variable">$basearch</span>/<br>Copy<br></code></pre></td></tr></table></figure>
+
+<p><strong>service模块： 相当于systemctl</strong></p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pf">ansible <span class="hljs-literal">all</span> -m service -a &#x27;name=httpd <span class="hljs-keyword">state</span>=started enabled=yes&#x27;<br>ansible <span class="hljs-literal">all</span> -m service -a &#x27;name=httpd <span class="hljs-keyword">state</span>=stopped&#x27;<br>ansible <span class="hljs-literal">all</span> -m service -a &#x27;name=httpd <span class="hljs-keyword">state</span>=reloaded&#x27;<br>Copy<br></code></pre></td></tr></table></figure>
+
+<p><strong>User模块，Group模块 ： 进行用户和用户组管理，uid、gid、家目录、名字等使用键值对表示</strong></p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">ansible all -m <span class="hljs-keyword">user</span> <span class="hljs-title">-a</span> &#x27;<span class="hljs-attr">name=</span>user1 <span class="hljs-attr">comment=</span><span class="hljs-string">&quot;test user&quot;</span> <span class="hljs-attr">uid=</span><span class="hljs-number">2048</span> <span class="hljs-attr">home=</span>/app/user1 <span class="hljs-attr">group=</span>root&#x27;<br>ansible websrvs -m <span class="hljs-keyword">group</span>  <span class="hljs-title">-a</span> &#x27;<span class="hljs-attr">name=</span>nginx <span class="hljs-attr">gid=</span><span class="hljs-number">88</span> <span class="hljs-attr">system=</span>yes&#x27;<br>Copy<br></code></pre></td></tr></table></figure>
+
+<p><strong>Setup 模块 : 收集主机的系统信息，可使用filter过滤</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">ansible <span class="hljs-keyword">all</span> <span class="hljs-operator">-</span>m setup <span class="hljs-operator">-</span>a <span class="hljs-string">&#x27;filter=ansible_python_version&#x27;</span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>debug 模块 ：此模块可以用于输出信息,并且通过 msg 定制输出的信息内容</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment">#可输出变量</span><br><span class="hljs-attr">tasks:</span> <br><br>   <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">output</span> <span class="hljs-string">variables</span><br>     <span class="hljs-attr">debug:</span><br>     <span class="hljs-attr">msg:</span> <span class="hljs-string">Host</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">&#123;&#123; ansible_nodename &#125;&#125;</span>&quot;</span> <span class="hljs-string">Ip</span>  <span class="hljs-string">&quot;<span class="hljs-template-variable">&#123;&#123; ansible_default_ipv4.address </span></span><br><span class="hljs-template-variable"><span class="hljs-string">     &#125;&#125;</span>&quot;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="编写playbook，完成安装httpd服务"><a href="#编写playbook，完成安装httpd服务" class="headerlink" title="编写playbook，完成安装httpd服务"></a>编写playbook，完成安装httpd服务</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-comment">#install httpd</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">hosts:</span> <span class="hljs-string">websrvs</span><br> <span class="hljs-attr">remote_user:</span> <span class="hljs-string">root</span><br> <span class="hljs-attr">gather_facts:</span> <span class="hljs-literal">no</span><br> <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Instal1</span> <span class="hljs-string">httpd</span><br>      <span class="hljs-attr">yum:</span> <span class="hljs-string">name=httpd</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Modify</span> <span class="hljs-string">config</span> <span class="hljs-string">list</span> <span class="hljs-string">port</span><br>      <span class="hljs-attr">lineinfile:</span> <br>        <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/httpd/conf/httpd.conf</span> <br>        <span class="hljs-attr">regexp:</span> <span class="hljs-string">&#x27;^Listen&#x27;</span><br>        <span class="hljs-attr">line:</span> <span class="hljs-string">&#x27;Listen 8080&#x27;</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Modify</span> <span class="hljs-string">config</span> <span class="hljs-string">data1</span><br>      <span class="hljs-attr">lineinfile:</span> <br>        <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/httpd/conf/httpd.conf</span> <br>        <span class="hljs-attr">regexp:</span> <span class="hljs-string">&#x27;^DocumentRoot &quot;/var/www/html&quot;&#x27;</span><br>        <span class="hljs-attr">line:</span> <span class="hljs-string">&#x27;DocumentRoot &quot;/data/html&quot;&#x27;</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Modify</span> <span class="hljs-string">config</span> <span class="hljs-string">data2</span><br>      <span class="hljs-attr">lineinfile:</span> <br>        <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/httpd/conf/httpd.conf</span> <br>        <span class="hljs-attr">regexp:</span> <span class="hljs-string">&#x27;^&lt;Directory &quot;/var/www/html&quot;&gt;&#x27;</span><br>        <span class="hljs-attr">line:</span> <span class="hljs-string">&#x27;&lt;Directory &quot;/data/html&quot;&gt;&#x27;</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Mkdir</span> <span class="hljs-string">website</span> <span class="hljs-string">dir</span><br>      <span class="hljs-attr">file:</span> <span class="hljs-string">path=/data/html</span> <span class="hljs-string">state=directory</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Web</span> <span class="hljs-string">html</span><br>      <span class="hljs-attr">copy:</span> <span class="hljs-string">src=files/index.html</span> <span class="hljs-string">dest=/data/html/</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Start</span> <span class="hljs-string">service</span><br>      <span class="hljs-attr">service:</span> <span class="hljs-string">name=httpd</span> <span class="hljs-string">state=started</span> <span class="hljs-string">enabled=yes</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="4、httpd协议的工作过程。"><a href="#4、httpd协议的工作过程。" class="headerlink" title="4、httpd协议的工作过程。"></a>4、httpd协议的工作过程。</h2><h3 id="一次完整的http请求处理过程"><a href="#一次完整的http请求处理过程" class="headerlink" title="一次完整的http请求处理过程"></a>一次完整的http请求处理过程</h3><p><img src="image-20220814225533528.png" srcset="/img/loading.gif" lazyload alt="image-20220814225533528"></p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs oxygene"><span class="hljs-number">1</span>、建立连接：接收或拒绝连接请求<br><span class="hljs-number">2</span>、接收请求：接收客户端请求报文中对某资源的一次请求的过程<br><span class="hljs-number">3</span>、处理请求：服务器对请求报文进行解析，并获取请求的资源及请求方法等相关信息，根据方法，资<br>源，首部和可选的主体部分对请求进行处理<br>常用请求<span class="hljs-keyword">Method</span>: GET、POST、HEAD、PUT、DELETE、TRACE、OPTIONS<br><span class="hljs-number">4</span>、访问资源：<br> 服务器获取请求报文中请求的资源web服务器，即存放了web资源的服务器，负责向请求者提供对方<br>请求的静态资源，或动态运行后生成的资源<br><span class="hljs-number">5</span>、构建响应报文：<br> 一旦Web服务器识别除了资源，就执行请求方法中描述的动作，并返回响应报文。响应报文中 包含<br>有响应状态码、响应首部，如果生成了响应主体的话，还包括响应主体<br><span class="hljs-number">6</span>、发送响应报文<br> Web服务器通过连接发送数据时也会面临与接收数据一样的问题。服务器可能有很多条到各个客户<br>端的连接，有些是空闲的，有些在向服务器发送数据，还有一些在向客户端回送响应数据。服务器要记<br>录连接的状态，还要特别注意对持久连接的处理。对非持久连接而言，服务器应该在发送了整条报文之<br>后，关闭自己这一端的连接。对持久连接来说，连接可能仍保持打开状态，在这种情况下，服务器要正<br>确地计算Content-Length首部，不然客户端就无法知道响应什么时候结束<br><span class="hljs-number">7</span>、记录日志<br> 最后，当事务结束时，Web服务器会在日志文件中添加一个条目，来描述已执行的事务<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="5、以apache-lamp架构，借助ansible实现自动化运维小案例。"><a href="#5、以apache-lamp架构，借助ansible实现自动化运维小案例。" class="headerlink" title="5、以apache/lamp架构，借助ansible实现自动化运维小案例。"></a>5、以apache/lamp架构，借助ansible实现自动化运维小案例。</h2><h2 id="6、一键安装，配置更新，站点版本发布，程序更新版本，以这些功能形成不同的playbook。"><a href="#6、一键安装，配置更新，站点版本发布，程序更新版本，以这些功能形成不同的playbook。" class="headerlink" title="6、一键安装，配置更新，站点版本发布，程序更新版本，以这些功能形成不同的playbook。"></a>6、一键安装，配置更新，站点版本发布，程序更新版本，以这些功能形成不同的playbook。</h2>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/ANSIBLE%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%A5%E5%8F%8Ahttp%E5%8D%8F%E8%AE%AE/">ANSIBLE运维自动化以及http协议</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/07/28/firewalld/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">firewalld</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/19/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A-2022-7-20/">
+                        <span class="hidden-mobile">第六周作业-2022-7-20</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

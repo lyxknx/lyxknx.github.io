@@ -1,0 +1,513 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="背景">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ansible的安装和入门">
+<meta property="og:url" content="http://example.com/2022/08/07/ansible%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="5-12 23:30">
+<meta property="og:description" content="背景">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/08/07/ansible%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E5%85%A5%E9%97%A8/image-20220811212310209.png">
+<meta property="og:image" content="http://example.com/2022/08/07/ansible%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E5%85%A5%E9%97%A8/image-20220811211829292.png">
+<meta property="og:image" content="http://example.com/2022/08/07/ansible%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E5%85%A5%E9%97%A8/image-20220811220749142.png">
+<meta property="article:published_time" content="2022-08-07T01:49:54.000Z">
+<meta property="article:modified_time" content="2022-08-11T15:25:35.784Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="27.4">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2022/08/07/ansible%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E5%85%A5%E9%97%A8/image-20220811212310209.png">
+  
+  
+  <title>ansible的安装和入门 - 5-12 23:30</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="ansible的安装和入门">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-08-07 01:49" pubdate>
+        August 7, 2022 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      12k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      97 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">ansible的安装和入门</h1>
+            
+            <div class="markdown-body">
+              <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><span id="more"></span>
+
+<h2 id="包安装方式"><a href="#包安装方式" class="headerlink" title="包安装方式"></a>包安装方式</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><pre><code class="hljs mipsasm">[root@node1 yum.repos.d]<span class="hljs-comment"># yum provides ansible</span><br>Loaded plugins: fastestmirror<br>Loading mirror speeds from <span class="hljs-keyword">cached </span>hostfile<br> * <span class="hljs-keyword">base: </span>mirrors.<span class="hljs-keyword">bupt.edu.cn</span><br><span class="hljs-keyword"></span> * <span class="hljs-keyword">extras: </span>mirrors.<span class="hljs-keyword">bfsu.edu.cn</span><br><span class="hljs-keyword"></span> * updates: mirrors.<span class="hljs-keyword">bfsu.edu.cn</span><br><span class="hljs-keyword"></span>ansible<span class="hljs-number">-2</span>.<span class="hljs-number">9</span>.<span class="hljs-number">27</span><span class="hljs-number">-1</span>.el7.noarch : SSH-<span class="hljs-keyword">based </span>configuration management, deployment, <span class="hljs-keyword">and </span>task execution system<br>Repo        : epel<br></code></pre></td></tr></table></figure>
+
+<p>需要有epel源才可以安装ansible。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[root@node2 yum.repos.d]</span><span class="hljs-comment"># cat epel.repo </span><br><span class="hljs-section">[epel]</span><br><span class="hljs-attr">name</span>=Extra Packages for Enterprise Linux <span class="hljs-number">7</span> - <span class="hljs-variable">$basearch</span><br><span class="hljs-attr">baseurl</span>=http://mirrors.aliyun.com/epel/<span class="hljs-number">7</span>/<span class="hljs-variable">$basearch</span><br><span class="hljs-attr">failovermethod</span>=priority<br><span class="hljs-attr">enabled</span>=<span class="hljs-number">1</span><br><span class="hljs-attr">gpgcheck</span>=<span class="hljs-number">0</span><br><span class="hljs-attr">gpgkey</span>=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-<span class="hljs-number">7</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">[root@node1 yum.repos.d]# yum install ansible<br><br>[root@node1 yum.repos.d]# yum <span class="hljs-keyword">info</span> ansible<br>Loaded plugins: fastestmirror<br>Loading mirror speeds <span class="hljs-keyword">from</span> cached hostfile<br> * base: mirrors.bupt.edu.cn<br> * extras: mirrors.bfsu.edu.cn<br> * updates: mirrors.bfsu.edu.cn<br>Installed Packages<br><span class="hljs-type">Name</span>        : ansible<br>Arch        : noarch<br><span class="hljs-keyword">Version</span>     : <span class="hljs-number">2.9</span><span class="hljs-number">.27</span><br><span class="hljs-keyword">Release</span>     : <span class="hljs-number">1.</span>el7<br>Size        : <span class="hljs-number">103</span> M<br>Repo        : installed<br><span class="hljs-keyword">From</span> repo   : epel<br><span class="hljs-keyword">Summary</span>     : SSH-based <span class="hljs-keyword">configuration</span> management, deployment, <span class="hljs-keyword">and</span> task execution <span class="hljs-keyword">system</span><br>URL         : http://ansible.com<br>License     : GPLv3+<br>Description : Ansible <span class="hljs-keyword">is</span> a radically simple model-driven <span class="hljs-keyword">configuration</span> management,<br>            : multi-node deployment, <span class="hljs-keyword">and</span> remote task execution <span class="hljs-keyword">system</span>. Ansible works<br>            : <span class="hljs-keyword">over</span> SSH <span class="hljs-keyword">and</span> does <span class="hljs-keyword">not</span> require <span class="hljs-keyword">any</span> software <span class="hljs-keyword">or</span> daemons <span class="hljs-keyword">to</span> be installed<br>            : <span class="hljs-keyword">on</span> remote nodes. <span class="hljs-keyword">Extension</span> modules can be written <span class="hljs-keyword">in</span> <span class="hljs-keyword">any</span> <span class="hljs-keyword">language</span> <span class="hljs-keyword">and</span><br>            : are transferred <span class="hljs-keyword">to</span> managed machines automatically.<br><br>[root@node1 yum.repos.d]# ansible <span class="hljs-comment">--version</span><br>ansible <span class="hljs-number">2.9</span><span class="hljs-number">.27</span><br>  config file = /etc/ansible/ansible.cfg<br>  configured module <span class="hljs-keyword">search</span> <span class="hljs-type">path</span> = [u<span class="hljs-string">&#x27;/root/.ansible/plugins/modules&#x27;</span>, u<span class="hljs-string">&#x27;/usr/share/ansible/plugins/modules&#x27;</span>]<br>  ansible python module <span class="hljs-keyword">location</span> = /usr/lib/python2<span class="hljs-number">.7</span>/site-packages/ansible<br>  executable <span class="hljs-keyword">location</span> = /usr/bin/ansible<br>  python version = <span class="hljs-number">2.7</span><span class="hljs-number">.5</span> (<span class="hljs-keyword">default</span>, Oct <span class="hljs-number">30</span> <span class="hljs-number">2018</span>, <span class="hljs-number">23</span>:<span class="hljs-number">45</span>:<span class="hljs-number">53</span>) [GCC <span class="hljs-number">4.8</span><span class="hljs-number">.5</span> <span class="hljs-number">20150623</span> (Red Hat <span class="hljs-number">4.8</span><span class="hljs-number">.5</span><span class="hljs-number">-36</span>)]<br>  <br>[root@node1 yum.repos.d]# file /usr/bin/ansible<br>/usr/bin/ansible: symbolic link <span class="hljs-keyword">to</span> `/usr/bin/ansible<span class="hljs-number">-2.7</span><span class="hljs-string">&#x27;</span><br><span class="hljs-string"></span><br><span class="hljs-string">[root@node1 yum.repos.d]# ll /usr/bin/ansible</span><br><span class="hljs-string">lrwxrwxrwx. 1 root root 20 Aug  6 21:55 /usr/bin/ansible -&gt; /usr/bin/ansible-2.7</span><br><span class="hljs-string"></span><br><span class="hljs-string">[root@node1 yum.repos.d]# which ansible</span><br><span class="hljs-string">/usr/bin/ansible</span><br><span class="hljs-string">[root@node1 yum.repos.d]# vim `which ansible`</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="ansible相关文件"><a href="#ansible相关文件" class="headerlink" title="ansible相关文件"></a>ansible相关文件</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c">[root@node1 yum.repos.d]<span class="hljs-meta"># vim /etc/ansible/ansible.cfg              <span class="hljs-comment">//ansbile的主配置文件，一般情况不需要修改，采用默认设置</span></span><br>[root@node1 yum.repos.d]<span class="hljs-meta"># vim /etc/ansible/hosts                    <span class="hljs-comment">// 这个文件很关键，存放的被管理的主机清单</span></span><br></code></pre></td></tr></table></figure>
+
+<p>第一次使用ansible以key方式管理被控制主机时，需要输入yes，添加到ansible机器的.ssh/known_hosts 文件中</p>
+<figure class="highlight pony"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs pony">[root@node1 yum.repos.d]# ansible all -m ping <br><span class="hljs-type">The</span> authenticity of host <span class="hljs-string">&#x27;192.168.23.102 (192.168.23.102)&#x27;</span> can&#x27;t <span class="hljs-keyword">be</span> established.<br><span class="hljs-type">ECDSA</span> key fingerprint <span class="hljs-keyword">is</span> <span class="hljs-type">SHA256</span>:/<span class="hljs-type">AaL9QiN7JWUr8LZsqaGeKWO</span>+<span class="hljs-type">DfRswsVJVakIyoOHLM</span>.<br><span class="hljs-type">ECDSA</span> key fingerprint <span class="hljs-keyword">is</span> <span class="hljs-type">MD5</span>:<span class="hljs-number">29</span>:<span class="hljs-number">79</span>:<span class="hljs-number">27</span>:f9:a6:f0:<span class="hljs-number">08</span>:ff:<span class="hljs-number">37</span>:fa:<span class="hljs-number">59</span>:<span class="hljs-number">0</span>a:<span class="hljs-number">0</span>f:a1:ff:<span class="hljs-number">0</span>d.<br><span class="hljs-type">Are</span> you sure you want to <span class="hljs-keyword">continue</span> connecting (yes/no)? <span class="hljs-type">The</span> authenticity of host <span class="hljs-string">&#x27;192.168.23.103 (192.168.23.103)&#x27;</span> can&#x27;t <span class="hljs-keyword">be</span> established.<br><span class="hljs-type">ECDSA</span> key fingerprint <span class="hljs-keyword">is</span> <span class="hljs-type">SHA256</span>:/<span class="hljs-type">AaL9QiN7JWUr8LZsqaGeKWO</span>+<span class="hljs-type">DfRswsVJVakIyoOHLM</span>.<br><span class="hljs-type">ECDSA</span> key fingerprint <span class="hljs-keyword">is</span> <span class="hljs-type">MD5</span>:<span class="hljs-number">29</span>:<span class="hljs-number">79</span>:<span class="hljs-number">27</span>:f9:a6:f0:<span class="hljs-number">08</span>:ff:<span class="hljs-number">37</span>:fa:<span class="hljs-number">59</span>:<span class="hljs-number">0</span>a:<span class="hljs-number">0</span>f:a1:ff:<span class="hljs-number">0</span>d.<br><span class="hljs-type">Are</span> you sure you want to <span class="hljs-keyword">continue</span> connecting (yes/no)? <span class="hljs-type">The</span> authenticity of host <span class="hljs-string">&#x27;192.168.23.101 (192.168.23.101)&#x27;</span> can&#x27;t <span class="hljs-keyword">be</span> established.<br><span class="hljs-type">ECDSA</span> key fingerprint <span class="hljs-keyword">is</span> <span class="hljs-type">SHA256</span>:/<span class="hljs-type">AaL9QiN7JWUr8LZsqaGeKWO</span>+<span class="hljs-type">DfRswsVJVakIyoOHLM</span>.<br><span class="hljs-type">ECDSA</span> key fingerprint <span class="hljs-keyword">is</span> <span class="hljs-type">MD5</span>:<span class="hljs-number">29</span>:<span class="hljs-number">79</span>:<span class="hljs-number">27</span>:f9:a6:f0:<span class="hljs-number">08</span>:ff:<span class="hljs-number">37</span>:fa:<span class="hljs-number">59</span>:<span class="hljs-number">0</span>a:<span class="hljs-number">0</span>f:a1:ff:<span class="hljs-number">0</span>d.<br><span class="hljs-type">Are</span> you sure you want to <span class="hljs-keyword">continue</span> connecting (yes/no)? yes<br><span class="hljs-number">192.168</span><span class="hljs-number">.23</span><span class="hljs-number">.102</span> | <span class="hljs-type">UNREACHABLE</span>! =&gt; &#123;<br>    <span class="hljs-string">&quot;changed&quot;</span>: <span class="hljs-literal">false</span>, <br>    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;Failed to connect to the host via ssh: Warning: Permanently added &#x27;192.168.23.102&#x27; (ECDSA) to the list of known hosts.\r\nPermission denied (publickey,gssapi-keyex,gssapi-with-mic,password).&quot;</span>, <br>    <span class="hljs-string">&quot;unreachable&quot;</span>: <span class="hljs-literal">true</span><br>&#125;<br>r | <span class="hljs-type">UNREACHABLE</span>! =&gt; &#123;<br>    <span class="hljs-string">&quot;changed&quot;</span>: <span class="hljs-literal">false</span>, <br>    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;Failed to connect to the host via ssh: ssh: Could not resolve hostname r: Name or service not known&quot;</span>, <br>    <span class="hljs-string">&quot;unreachable&quot;</span>: <span class="hljs-literal">true</span><br>&#125;<br>y | <span class="hljs-type">UNREACHABLE</span>! =&gt; &#123;<br>    <span class="hljs-string">&quot;changed&quot;</span>: <span class="hljs-literal">false</span>, <br>    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;Failed to connect to the host via ssh: ssh: Could not resolve hostname y: Name or service not known&quot;</span>, <br>    <span class="hljs-string">&quot;unreachable&quot;</span>: <span class="hljs-literal">true</span><br>&#125;<br>q | <span class="hljs-type">UNREACHABLE</span>! =&gt; &#123;<br>    <span class="hljs-string">&quot;changed&quot;</span>: <span class="hljs-literal">false</span>, <br>    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;Failed to connect to the host via ssh: ssh: Could not resolve hostname q: Name or service not known&quot;</span>, <br>    <span class="hljs-string">&quot;unreachable&quot;</span>: <span class="hljs-literal">true</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>被管理的机器会很多，一个个点yes不太理想。可以使用以下两种方法，减去输入yes的步骤。</p>
+<h2 id="减去连接远程主机时输入yes的步骤"><a href="#减去连接远程主机时输入yes的步骤" class="headerlink" title="减去连接远程主机时输入yes的步骤"></a>减去连接远程主机时输入yes的步骤</h2><p>方法1、修改ssh客户端的配置文件</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript">[root@node1 ~]<span class="hljs-comment"># vim /etc/ssh/ssh_config </span><br><span class="hljs-comment">#   StrictHostKeyChecking ask</span><br>   StrictHostKeyChecking <span class="hljs-literal">no</span><br></code></pre></td></tr></table></figure>
+
+<p>方法2、修改ansible的主配置文件</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[root@node1 ~]</span><span class="hljs-comment"># vim /etc/ansible/ansible.cfg </span><br><span class="hljs-comment">#host_key_checking = False</span><br><span class="hljs-attr">host_key_checking</span> = <span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
+
+<p>再次连接时就不要敲yes了</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs ruby">[root<span class="hljs-variable">@node1</span> ~]<span class="hljs-comment"># echo &gt; .ssh/known_hosts</span><br>[root<span class="hljs-variable">@node1</span> ~]<span class="hljs-comment"># ansible 192.168.23.102 -m ping</span><br><span class="hljs-meta prompt_">192.168.23.102 | UNREACHABLE! =&gt;</span> &#123;<br>    <span class="hljs-string">&quot;changed&quot;</span>: <span class="hljs-literal">false</span>, <br>    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;Failed to connect to the host via ssh: Warning: Permanently added &#x27;192.168.23.102&#x27; (ECDSA) to the list of known hosts.\r\nPermission denied (publickey,gssapi-keyex,gssapi-with-mic,password).&quot;</span>, <br>    <span class="hljs-string">&quot;unreachable&quot;</span>: <span class="hljs-literal">true</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>目前还没有做基于kye的验证，所以暂时还连不上，字体颜色是红的。</p>
+<h2 id="基于kye的验证"><a href="#基于kye的验证" class="headerlink" title="基于kye的验证"></a>基于kye的验证</h2><p>有同学写的一键脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-comment">#</span><br><span class="hljs-comment">#*********************************************</span><br><span class="hljs-comment">#Author:            C3t4m</span><br><span class="hljs-comment">#Blog:              75j.xyz</span><br><span class="hljs-comment">#Description：      基于key验证多主机ssh访问</span><br><span class="hljs-comment">#Date:              2021-03-31</span><br><span class="hljs-comment">#*********************************************</span><br><br>PASS=123456<br><span class="hljs-comment">#设置网段最后的地址，4-255之间，越小扫描越快</span><br>END=254<br><br>IP=`ip a s eth0 | awk -F<span class="hljs-string">&#x27;[ /]+&#x27;</span> <span class="hljs-string">&#x27;NR==3&#123;print $3&#125;&#x27;</span>`<br>NET=<span class="hljs-variable">$&#123;IP%.*&#125;</span>.<br><br><span class="hljs-built_in">rm</span> -f /root/.ssh/id_rsa<br>[ -e ./SCANIP.<span class="hljs-built_in">log</span> ] &amp;&amp; <span class="hljs-built_in">rm</span> -f SCANIP.<span class="hljs-built_in">log</span><br><span class="hljs-keyword">for</span>((i=3;i&lt;=<span class="hljs-string">&quot;<span class="hljs-variable">$END</span>&quot;</span>;i++));<span class="hljs-keyword">do</span><br>ping -c 1 -w 1  <span class="hljs-variable">$&#123;NET&#125;</span><span class="hljs-variable">$i</span> &amp;&gt; /dev/null  &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;NET&#125;</span><span class="hljs-variable">$i</span>&quot;</span> &gt;&gt; SCANIP.<span class="hljs-built_in">log</span> &amp;<br><span class="hljs-keyword">done</span><br><span class="hljs-built_in">wait</span><br><br>ssh-keygen -P <span class="hljs-string">&quot;&quot;</span> -f /root/.ssh/id_rsa<br>rpm -q sshpass || yum -y install sshpass<br>sshpass -p <span class="hljs-variable">$PASS</span> ssh-copy-id -o StrictHostKeyChecking=no <span class="hljs-variable">$IP</span> <br><br>AliveIP=(`<span class="hljs-built_in">cat</span> SCANIP.<span class="hljs-built_in">log</span>`)<br><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> <span class="hljs-variable">$&#123;AliveIP[*]&#125;</span>;<span class="hljs-keyword">do</span><br>sshpass -p <span class="hljs-variable">$PASS</span> scp -o StrictHostKeyChecking=no -r /root/.ssh root@<span class="hljs-variable">$&#123;n&#125;</span>:<br><span class="hljs-keyword">done</span><br><br><span class="hljs-comment">#把.ssh/known_hosts拷贝到所有主机，使它们第一次互相访问时不需要输入回车</span><br><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> <span class="hljs-variable">$&#123;AliveIP[*]&#125;</span>;<span class="hljs-keyword">do</span><br>scp /root/.ssh/known_hosts <span class="hljs-variable">$&#123;n&#125;</span>:.ssh/<br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">脚本的执行记录：<br>[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># bash ssh_key.sh </span><br>Generating public/private rsa key pair.<br>Your identification has been saved in /root/.ssh/id_rsa.<br>Your public key has been saved in /root/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>SHA256:062ISmu165B+M/nf0d0gvJ5hpXjOZp3ohPY8Qq0mXpk root<span class="hljs-meta">@node1</span><br>The key&#x27;s randomart image is:<br>+---[RSA 2048]----+<br>|<span class="hljs-string">                 </span>|<br>|<span class="hljs-string">                 </span>|<br>|<span class="hljs-string">                 </span>|<br>|<span class="hljs-string">         . o     </span>|<br>|<span class="hljs-string">        S ..+ o  </span>|<br>|<span class="hljs-string">     ... o.*.* o.</span>|<br>|<span class="hljs-string">    +..o..E.Oo..o</span>|<br>|<span class="hljs-string">   o.+* .o+@=+o  </span>|<br>|<span class="hljs-string">   .+oo*o+.=X.   </span>|<br>+----[SHA256]-----+<br>sshpass-1.06-2.el7.x86_64<br>/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: <span class="hljs-string">&quot;/root/.ssh/id_rsa.pub&quot;</span><br>/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed<br>/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys<br><br>Number of key(s) added: 1<br><br>Now try logging into the machine, with:   <span class="hljs-string">&quot;ssh -o &#x27;StrictHostKeyChecking=no&#x27; &#x27;192.168.23.101&#x27;&quot;</span><br>and check to make sure that only the key(s) you wanted were added.<br><br>Warning: Permanently added &#x27;192.168.23.11&#x27; (ECDSA) to the list of known hosts.<br>Warning: Permanently added &#x27;192.168.23.8&#x27; (ECDSA) to the list of known hosts.<br>Warning: Permanently added &#x27;192.168.23.9&#x27; (ECDSA) to the list of known hosts.<br>ssh: connect to host 192.168.23.254 port 22: Connection refused<br>lost connection<br>known_hosts                                                                                    100% 1052     1.0MB/s   00:00                // 192.168.23.11/8/9分别是node1、2、3的eth1地址。<br>known_hosts                                                                                    100% 1052   647.8KB/s   00:00    <br>known_hosts                                                                                    100% 1052   444.7KB/s   00:00    <br>known_hosts                                                                                    100% 1052   429.5KB/s   00:00    <br>known_hosts                                                                                    100% 1052   744.2KB/s   00:00    <br>known_hosts                                                                                    100% 1052   590.5KB/s   00:00    <br>ssh: connect to host 192.168.23.254 port 22: Connection refused    //VMnet8的网关地址<br>lost connection<br><br>测试验证基于key的连接：<br>[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># ssh 192.168.23.102</span><br>Last login: Sat Aug  6 23:21:20 2022 from 192.168.23.1<br>[root<span class="hljs-meta">@node2</span> ~]<span class="hljs-comment"># ssh 192.168.23.103</span><br>Last login: Sat Aug  6 23:21:30 2022 from 192.168.23.1<br>[root<span class="hljs-meta">@node3</span> ~]<span class="hljs-comment"># ssh 192.168.23.102</span><br>Last login: Sat Aug  6 23:35:45 2022 from 192.168.23.101<br>[root<span class="hljs-meta">@node2</span> ~]<span class="hljs-comment"># ssh 192.168.23.101</span><br>Last login: Sat Aug  6 23:21:07 2022 from 192.168.23.1<br>[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># exit</span><br>logout<br>Connection to 192.168.23.101 closed.<br>[root<span class="hljs-meta">@node2</span> ~]<span class="hljs-comment"># exit</span><br>logout<br>Connection to 192.168.23.102 closed.<br>[root<span class="hljs-meta">@node3</span> ~]<span class="hljs-comment"># exit</span><br>logout<br>Connection to 192.168.23.103 closed.<br>[root<span class="hljs-meta">@node2</span> ~]<span class="hljs-comment"># exit</span><br>logout<br>Connection to 192.168.23.102 closed.<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="ansible基本工具使用"><a href="#ansible基本工具使用" class="headerlink" title="ansible基本工具使用"></a>ansible基本工具使用</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs ruby">[root<span class="hljs-variable">@ansible</span> ~]<span class="hljs-comment"># hostnamectl set-hostname ansible</span><br>[root<span class="hljs-variable">@ansible</span> ~]<span class="hljs-comment"># ansible all --list-hosts</span><br>  hosts (<span class="hljs-number">3</span>):<br>    <span class="hljs-number">192.168</span>.<span class="hljs-number">23.101</span><br>    <span class="hljs-number">192.168</span>.<span class="hljs-number">23.102</span><br>    <span class="hljs-number">192.168</span>.<span class="hljs-number">23.103</span><br>    <br>[root<span class="hljs-variable">@ansible</span> ~]<span class="hljs-comment"># ansible all -m ping     //-m,是指的模块，ansible有上千个功能模块</span><br><span class="hljs-meta prompt_">192.168.23.103 | SUCCESS =&gt;</span> &#123;<br>    <span class="hljs-string">&quot;ansible_facts&quot;</span>: &#123;<br>        <span class="hljs-string">&quot;discovered_interpreter_python&quot;</span>: <span class="hljs-string">&quot;/usr/bin/python&quot;</span><br>    &#125;, <br>    <span class="hljs-string">&quot;changed&quot;</span>: <span class="hljs-literal">false</span>, <br>    <span class="hljs-string">&quot;ping&quot;</span>: <span class="hljs-string">&quot;pong&quot;</span><br>&#125;<br><span class="hljs-meta prompt_">192.168.23.102 | SUCCESS =&gt;</span> &#123;<br>    <span class="hljs-string">&quot;ansible_facts&quot;</span>: &#123;<br>        <span class="hljs-string">&quot;discovered_interpreter_python&quot;</span>: <span class="hljs-string">&quot;/usr/bin/python&quot;</span><br>    &#125;, <br>    <span class="hljs-string">&quot;changed&quot;</span>: <span class="hljs-literal">false</span>, <br>    <span class="hljs-string">&quot;ping&quot;</span>: <span class="hljs-string">&quot;pong&quot;</span><br>&#125;                   /<span class="hljs-regexp">/ 不能自动退出，需要使用ctrl+c才能终止，这是为什么？</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="ansible-doc"><a href="#ansible-doc" class="headerlink" title="ansible-doc"></a>ansible-doc</h3><p>此工具用来显示模块帮助,相当于man</p>
+<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs fsharp">          status<span class="hljs-operator">:</span><br>[root<span class="hljs-operator">@</span>ansible <span class="hljs-operator">~</span>]# ansible<span class="hljs-operator">-</span>doc ping         <span class="hljs-comment">// // 查看模块的详细用法</span><br>[root<span class="hljs-operator">@</span>ansible <span class="hljs-operator">~</span>]# ansible<span class="hljs-operator">-</span>doc <span class="hljs-operator">-</span>s ping        <span class="hljs-comment">// 查看简短的关于模块的描述</span><br><span class="hljs-operator">-</span> name<span class="hljs-operator">:</span> Try <span class="hljs-keyword">to</span> connect <span class="hljs-keyword">to</span> host, verify a usable python <span class="hljs-keyword">and</span> <span class="hljs-keyword">return</span> `pong&#x27; on success<br>  ping<span class="hljs-operator">:</span><br>      data<span class="hljs-operator">:</span>                  # Data <span class="hljs-keyword">to</span> <span class="hljs-keyword">return</span> <span class="hljs-keyword">for</span> the `ping&#x27; <span class="hljs-keyword">return</span> value. If this parameter is <span class="hljs-built_in">set</span> <span class="hljs-keyword">to</span> `crash&#x27;, the <span class="hljs-keyword">module</span> will cause an <span class="hljs-keyword">exception</span>.<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="创建一个yaml文件"><a href="#创建一个yaml文件" class="headerlink" title="创建一个yaml文件"></a>创建一个yaml文件</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs yaml">[<span class="hljs-string">root@ansible</span> <span class="hljs-string">~</span>]<span class="hljs-comment"># vim hello.yaml</span><br>[<span class="hljs-string">root@ansible</span> <span class="hljs-string">~</span>]<span class="hljs-comment"># cat hello.yaml </span><br><span class="hljs-meta">---</span><br><span class="hljs-comment"># first yaml file</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">hosts:</span> <span class="hljs-string">websrvs</span><br>  <span class="hljs-attr">remote_user:</span> <span class="hljs-string">root</span><br>  <span class="hljs-attr">gather_facts:</span> <span class="hljs-literal">no</span> <span class="hljs-comment">#不收集系统信息，提高执行效率</span><br><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">test</span> <span class="hljs-string">network</span> <span class="hljs-string">connection</span><br>      <span class="hljs-attr">ping:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">excute</span> <span class="hljs-string">command</span><br>      <span class="hljs-attr">command:</span> <span class="hljs-string">wall</span> <span class="hljs-string">&quot;hello world!&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>检查是否有语法错误：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs yaml">[<span class="hljs-string">root@ansible</span> <span class="hljs-string">~</span>]<span class="hljs-comment"># ansible-playbook --syntax-check hello.yaml </span><br><br><span class="hljs-attr">playbook:</span> <span class="hljs-string">hello.yaml</span><br><br><br>[<span class="hljs-string">root@ansible</span> <span class="hljs-string">~</span>]<span class="hljs-comment"># cat hello.yaml </span><br><span class="hljs-meta">---</span><br><span class="hljs-comment"># first yaml file</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">hosts:</span> <span class="hljs-string">websrvs</span><br>  <span class="hljs-attr">remote_user:</span> <span class="hljs-string">root</span><br>  <span class="hljs-attr">gather_facts:</span> <span class="hljs-literal">no</span> <span class="hljs-comment">#不收集系统信息，提高执行效率</span><br><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">name:test</span> <span class="hljs-string">network</span> <span class="hljs-string">connection</span>              <span class="hljs-string">//</span> <span class="hljs-string">test前面没有空格</span><br>      <span class="hljs-attr">ping:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">excute</span> <span class="hljs-string">command</span><br>      <span class="hljs-attr">command:</span> <span class="hljs-string">wall</span> <span class="hljs-string">&quot;hello world!&quot;</span><br> <br>[<span class="hljs-string">root@ansible</span> <span class="hljs-string">~</span>]<span class="hljs-comment"># ansible-playbook --syntax-check hello.yaml </span><br><span class="hljs-string">ERROR!</span> <span class="hljs-string">We</span> <span class="hljs-string">were</span> <span class="hljs-string">unable</span> <span class="hljs-string">to</span> <span class="hljs-string">read</span> <span class="hljs-string">either</span> <span class="hljs-string">as</span> <span class="hljs-string">JSON</span> <span class="hljs-string">nor</span> <span class="hljs-string">YAML,</span> <span class="hljs-attr">these are the errors we got from each:</span><br><span class="hljs-attr">JSON:</span> <span class="hljs-literal">No</span> <span class="hljs-string">JSON</span> <span class="hljs-string">object</span> <span class="hljs-string">could</span> <span class="hljs-string">be</span> <span class="hljs-string">decoded</span><br><br><span class="hljs-string">Syntax</span> <span class="hljs-string">Error</span> <span class="hljs-string">while</span> <span class="hljs-string">loading</span> <span class="hljs-string">YAML.</span><br>  <span class="hljs-string">mapping</span> <span class="hljs-string">values</span> <span class="hljs-string">are</span> <span class="hljs-string">not</span> <span class="hljs-string">allowed</span> <span class="hljs-string">in</span> <span class="hljs-string">this</span> <span class="hljs-string">context</span><br><br><span class="hljs-string">The</span> <span class="hljs-string">error</span> <span class="hljs-string">appears</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">in</span> <span class="hljs-string">&#x27;/root/hello.yaml&#x27;</span><span class="hljs-string">:</span> <span class="hljs-string">line</span> <span class="hljs-number">9</span><span class="hljs-string">,</span> <span class="hljs-string">column</span> <span class="hljs-number">11</span><span class="hljs-string">,</span> <span class="hljs-string">but</span> <span class="hljs-string">may</span><br><span class="hljs-string">be</span> <span class="hljs-string">elsewhere</span> <span class="hljs-string">in</span> <span class="hljs-string">the</span> <span class="hljs-string">file</span> <span class="hljs-string">depending</span> <span class="hljs-string">on</span> <span class="hljs-string">the</span> <span class="hljs-string">exact</span> <span class="hljs-string">syntax</span> <span class="hljs-string">problem.</span><br><br><span class="hljs-attr">The offending line appears to be:</span><br><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">name:test</span> <span class="hljs-string">network</span> <span class="hljs-string">connection</span>   <span class="hljs-string">//</span> <span class="hljs-string">在进行语法检查时，提示有错误的地方在这里。行数不一定准确</span><br>      <span class="hljs-attr">ping:</span><br>          <span class="hljs-string">^</span> <span class="hljs-string">here</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>也可以使用-C，进行语法检查，同时做一个假运行（不做文件内容的修改）</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs markdown">[root@ansible ~]# ansible-playbook -C hello.yaml      // 进行语法检查，同时做一个假运行<br><br>PLAY [websrvs] <span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">**<span class="hljs-emphasis">*</span></span><br><span class="hljs-emphasis"><span class="hljs-strong"></span></span><br><span class="hljs-emphasis"><span class="hljs-strong">TASK [test network connection] *</span>**</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><br>ok: [192.168.23.102]<br>ok: [192.168.23.103]<br><br>^C [ERROR]: User interrupted execution<br>[root@ansible ~]# <br>[root@ansible ~]# <br>[root@ansible ~]# ansible-playbook hello.yaml    // 真的运行了<br><br>PLAY [websrvs] <span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">**<span class="hljs-emphasis">*</span></span><br><span class="hljs-emphasis"><span class="hljs-strong"></span></span><br><span class="hljs-emphasis"><span class="hljs-strong">TASK [test network connection] *</span>**</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><br>ok: [192.168.23.103]<br>ok: [192.168.23.102]<br>^C [ERROR]: User interrupted execution<br></code></pre></td></tr></table></figure>
+
+<p>如上写的第一个yaml文件执行结果，跟老师课堂上的效果不一样，</p>
+<p><img src="image-20220811212310209.png" srcset="/img/loading.gif" lazyload alt="image-20220811212310209"></p>
+<p><img src="image-20220811211829292.png" srcset="/img/loading.gif" lazyload alt="image-20220811211829292"></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs yaml">[<span class="hljs-string">root@ansible</span> <span class="hljs-string">~</span>]<span class="hljs-comment"># cat hello.yaml </span><br><span class="hljs-meta">---</span><br><span class="hljs-comment"># This is a playbook file             // 一个playbook，可以写多个play</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-attr">hosts:</span> <span class="hljs-string">websrvs</span><br>  <span class="hljs-attr">remote_user:</span> <span class="hljs-string">root</span><br>  <span class="hljs-attr">gather_facts:</span> <span class="hljs-literal">no</span> <span class="hljs-comment">#不收集系统信息，提高执行效率</span><br><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">ping</span> <br>      <span class="hljs-attr">ping:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">wall</span><br>      <span class="hljs-attr">shell:</span> <span class="hljs-string">wall</span> <span class="hljs-string">hello</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-attr">hosts:</span> <span class="hljs-string">dbsrvs</span><br><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">install</span> <span class="hljs-string">httpd</span><br>      <span class="hljs-attr">yum:</span> <span class="hljs-string">name=httpd</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">start</span> <span class="hljs-string">service</span><br>      <span class="hljs-attr">service:</span><br>        <span class="hljs-attr">name:</span> <span class="hljs-string">httpd</span><br>        <span class="hljs-attr">state:</span> <span class="hljs-string">started</span><br>        <span class="hljs-attr">enabled:</span> <span class="hljs-literal">yes</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="playbook命令常用的选项"><a href="#playbook命令常用的选项" class="headerlink" title="playbook命令常用的选项"></a>playbook命令常用的选项</h3><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-literal">-</span>-syntax-check       <span class="hljs-comment">#语法检查,可缩写成--syntax, 相当于bash -n </span><br><span class="hljs-literal">-</span>C --check <span class="hljs-comment">#模拟执行,只检测可能会发生的改变，但不真正执行操作,dry run </span><br><span class="hljs-literal">-</span>-list-hosts         <span class="hljs-comment">#列出运行任务的主机</span><br><span class="hljs-literal">-</span>-list-tags          <span class="hljs-comment">#列出tag</span><br><span class="hljs-literal">-</span>-list-tasks         <span class="hljs-comment">#列出task</span><br><span class="hljs-literal">-</span>-limit 主机列表      <span class="hljs-comment">#只针对主机列表中的特定主机执行</span><br><span class="hljs-literal">-</span>i INVENTORY         <span class="hljs-comment">#指定主机清单文件,通常一个项对应一个主机清单文件</span><br><span class="hljs-literal">-</span>-start-at-task START_AT_TASK <span class="hljs-comment">#从指定task开始执行,而非从头开始,START_AT_TASK为任务的</span><br>name<br><span class="hljs-literal">-</span>v -vv  -vvv          <span class="hljs-comment">#显示过程</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>指定当前项目中的主机清单，与其他项目的主机清单做区分，</p>
+<p><img src="image-20220811220749142.png" srcset="/img/loading.gif" lazyload alt="image-20220811220749142"></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B9%8Bansilbe/">运维自动化之ansilbe</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/27-4/">27.4</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/08/07/%E8%84%9A%E6%9C%AC%E6%96%B9%E5%BC%8F%E4%B8%80%E9%94%AE%E5%8D%87%E7%BA%A7%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%8C%85/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">脚本方式一键升级平台服务包</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/31/Centos7%E5%88%A9%E7%94%A8yum%E6%BA%90%E5%AE%89%E8%A3%85mysql5-7/">
+                        <span class="hidden-mobile">Centos7利用yum源安装mysql5.7</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

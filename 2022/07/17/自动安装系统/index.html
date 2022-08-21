@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="自动化部署 19.4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动安装系统">
+<meta property="og:url" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="5-12 23:30">
+<meta property="og:description" content="自动化部署 19.4">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220717132136349.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220717140332441.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716153229566.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716160716779.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716160913498.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716161928275.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716180339254.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716180453972.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716180526477.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716181130801.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716183850547.png">
+<meta property="og:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220716181520061.png">
+<meta property="article:published_time" content="2022-07-17T00:54:19.000Z">
+<meta property="article:modified_time" content="2022-07-17T06:04:15.327Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="自动化部署">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2022/07/17/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/image-20220717132136349.png">
+  
+  
+  <title>自动安装系统 - 5-12 23:30</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="自动安装系统">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-17 00:54" pubdate>
+        July 17, 2022 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      15k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      124 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">自动安装系统</h1>
+            
+            <div class="markdown-body">
+              <h1 id="自动化部署-19-4"><a href="#自动化部署-19-4" class="headerlink" title="自动化部署 19.4"></a>自动化部署 19.4</h1><span id="more"></span>
+
+<h3 id="自制光盘方式"><a href="#自制光盘方式" class="headerlink" title="自制光盘方式"></a>自制光盘方式</h3><p>（1）制作引导光盘</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><pre><code class="hljs gradle">[root@node1 ~]# mount <span class="hljs-regexp">/dev/</span>cdrom <span class="hljs-regexp">/mnt/</span><br>mount: <span class="hljs-regexp">/dev/</span>sr0 is <span class="hljs-keyword">write</span>-<span class="hljs-keyword">protected</span>, mounting <span class="hljs-keyword">read</span>-only<br>[root@node1 ~]# mkdir -p <span class="hljs-regexp">/data/myi</span>so<br>[root@node1 ~]# cp -r <span class="hljs-regexp">/mnt/i</span>solinux<span class="hljs-regexp">/ /</span>data<span class="hljs-regexp">/myiso/</span><br>[root@node1 ~]# tree <span class="hljs-regexp">/data/myi</span>so/<br><span class="hljs-regexp">/data/myi</span>so/<br>└── isolinux<br>    ├── boot.cat<br>    ├── boot.msg<br>    ├── grub.conf<br>    ├── initrd.img<br>    ├── isolinux.bin<br>    ├── isolinux.cfg<br>    ├── memtest<br>    ├── splash.png<br>    ├── TRANS.TBL<br>    ├── vesamenu.c32<br>    └── vmlinuz<br><br><span class="hljs-number">1</span> directory, <span class="hljs-number">11</span> files<br><br>[root@node1 ~]# vim <span class="hljs-regexp">/data/myi</span>so<span class="hljs-regexp">/isolinux/i</span>solinux.cfg <br><br>label linux<br>  menu label ^Auto Install CentOS <span class="hljs-number">7</span><br>  kernel vmlinuz<br>  initrd=initrd.img text ks=cdrom:/myks.cfg<br></code></pre></td></tr></table></figure>
+
+<p>（2）创建kickstart应答文件</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">[root@node1 ~]<span class="hljs-comment"># vim /data/myiso/myks.cfg </span><br><br><span class="hljs-comment">#platform=x86, AMD64, or Intel EM64T</span><br><span class="hljs-comment">#version=DEVEL</span><br><span class="hljs-comment"># Install OS instead of upgrade</span><br>install<br><span class="hljs-comment"># Keyboard layouts</span><br>keyboard &#x27;us&#x27;<br><span class="hljs-comment"># Root password</span><br>rootpw <span class="hljs-params">--plaintext</span> 123456         <span class="hljs-string">//</span> 明文的密码<br><span class="hljs-comment"># System language</span><br>lang en_US<br><span class="hljs-comment"># System authorization information</span><br>auth  <span class="hljs-params">--useshadow</span>  <span class="hljs-params">--passalgo=md5</span><br><span class="hljs-comment"># Use text mode install</span><br>text                            <span class="hljs-string">//</span> 文本安装<br>firstboot <span class="hljs-params">--disable</span><br><span class="hljs-comment"># SELinux configuration</span><br>selinux <span class="hljs-params">--disabled</span>               <span class="hljs-string">//</span> 禁用selinux<br><br><br><span class="hljs-comment"># Firewall configuration</span><br>firewall <span class="hljs-params">--disabled</span>              <span class="hljs-string">//</span> 禁用防火墙<br><span class="hljs-comment"># Network information</span><br>network  <span class="hljs-params">--bootproto=dhcp</span> <span class="hljs-params">--device=eth1</span>   <br>network  <span class="hljs-params">--bootproto=dhcp</span> <span class="hljs-params">--device=eth0</span><br><span class="hljs-comment"># Reboot after installation</span><br>reboot<br><span class="hljs-comment"># System timezone</span><br>timezone Africa/Abidjan<br><span class="hljs-comment"># Use network installation</span><br>url <span class="hljs-params">--url=</span><span class="hljs-string">&quot;http://192.168.23.101/centos/7/os/x86_64/&quot;</span>    <span class="hljs-string">//</span> yum仓库路径<br><span class="hljs-comment"># System bootloader configuration</span><br>bootloader <span class="hljs-params">--append=</span><span class="hljs-string">&quot;net.ifnames=0&quot;</span> <span class="hljs-params">--location=mbr</span>     <span class="hljs-string">//</span> bootloader的内核参数加上了，网卡名称是eth了<br><span class="hljs-comment"># Clear the Master Boot Record</span><br>zerombr<br><span class="hljs-comment"># Partition clearing information</span><br>clearpart <span class="hljs-params">--all</span><br><span class="hljs-comment"># Disk partitioning information</span><br>part / <span class="hljs-params">--fstype=</span><span class="hljs-string">&quot;xfs&quot;</span> <span class="hljs-params">--size=10000</span><br>part <span class="hljs-string">/boot</span> <span class="hljs-params">--fstype=</span><span class="hljs-string">&quot;xfs&quot;</span> <span class="hljs-params">--size=1000</span><br>part swap <span class="hljs-params">--fstype=</span><span class="hljs-string">&quot;swap&quot;</span> <span class="hljs-params">--size=2048</span><br><br>%post<br>mkdir <span class="hljs-string">/etc/yum.repos.d/bak</span><br>mv <span class="hljs-string">/etc/yum.repos.d/</span>*<span class="hljs-string">.repo</span> <span class="hljs-string">/etc/yum.repos.d/bak</span><br>cat &gt; <span class="hljs-string">/etc/yum.repos.d/base.repo</span> &lt;&lt;EOF                 <span class="hljs-string">//</span> 在文件中增加了yum配置文件的内容<br>[base]<br>name=CentOS-$releasever - Base<br>mirrorlist=http:<span class="hljs-string">//mirrorlist.centos.org/</span>?release=$releasever&amp;arch=$basearch&amp;repo=os&amp;infra=$infra<br><span class="hljs-comment">#baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/</span><br>gpgcheck=1<br>gpgkey=file:<span class="hljs-string">///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><br><span class="hljs-comment">#released updates </span><br>[updates]<br>name=CentOS-$releasever - Updates<br>mirrorlist=http:<span class="hljs-string">//mirrorlist.centos.org/</span>?release=$releasever&amp;arch=$basearch&amp;repo=updates&amp;infra=$infra<br><span class="hljs-comment">#baseurl=http://mirror.centos.org/centos/$releasever/updates/$basearch/</span><br>gpgcheck=1<br>gpgkey=file:<span class="hljs-string">///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><br><span class="hljs-comment">#additional packages that may be useful</span><br>[extras]<br>name=CentOS-$releasever - Extras<br>mirrorlist=http:<span class="hljs-string">//mirrorlist.centos.org/</span>?release=$releasever&amp;arch=$basearch&amp;repo=extras&amp;infra=$infra<br><span class="hljs-comment">#baseurl=http://mirror.centos.org/centos/$releasever/extras/$basearch/</span><br>gpgcheck=1<br>gpgkey=file:<span class="hljs-string">///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><br><span class="hljs-comment">#additional packages that extend functionality of existing packages</span><br>[centosplus]<br>name=CentOS-$releasever - Plus<br>mirrorlist=http:<span class="hljs-string">//mirrorlist.centos.org/</span>?release=$releasever&amp;arch=$basearch&amp;repo=centosplus&amp;infra=$infra<br><span class="hljs-comment">#baseurl=http://mirror.centos.org/centos/$releasever/centosplus/$basearch/</span><br>gpgcheck=1<br>enabled=0<br>gpgkey=file:<span class="hljs-string">///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><br>EOF<br>mkdir <span class="hljs-string">/root/.ssh/</span> -m 700                            <span class="hljs-string">//</span>配置基于key验证登录系统<br>cat &gt; <span class="hljs-string">/root/.ssh/authorized_keys</span> &lt;&lt;EOF<br>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXHaEV3kmyS7qCYw+OcYjBEAXPJ+CLLB+cI/0Az2sASKXXEMk7KwTHrqgC9YEsDLKn4zMU9i1qt3jzdqExigs8y7S7FAe0xFpkJhumywIMHXKgiYiSSw3mI94hVp3x2recGkMXoQrvaY2iPj3iKBZCINQxQ1+sO+JbLlTEWAH+drwDGuCe+MZGcYYCHJw4f2l+hifhKIGDIFB2/rxvEBG8sqTuZrD5RKeMiTodnJREyf2gchrwMb3fUIu0K3kNafN9eR8IQch3AGoe524k9Rvm0S37iQHOft6jgJI59IHBjDqQQUiLba/FDAo7PaS0rFo2XsAYmQZ0FHLqwvIoAYBH root@node1<br>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDciEtJ5mQ7qEKcGSkdxYRzl2vsEDaDDo0Xr+QIRm8Fw7YjTK3QClTiAmiKMpxk3hwovxIgtyOGwuu/<span class="hljs-string">/umXdJs3jvUGyaOXx6AOOzF4gvMInA94YBN0OeVFwVdgmxl3BpqIINAeK6</span>+UVeaF2RfP6aiXNNohZ8z5tuKp/3bhpsv9V4G1X8Xff5TXVwlwr6R1IPVxtjoj5CwjmQrgjMmxfPkrlZUKfxtcGHqsg9Q9kCKaa6H9e+Ur9owjiu5xe+dnqxDUbbFa1MsJ9PK9U4PWig1mPuKaExd8TwmTgk50LyYnA4NyDg9rq0j8KmOmjtp1buEpPlxGvYV1/tPxyd3qorqP root@node1<br>EOF<br>chmod 600 <span class="hljs-string">/root/.ssh/authorized_keys</span><br>useradd linux44                                   <span class="hljs-string">//</span> 创建账号<br><span class="hljs-keyword">echo</span> 123456 |passwd <span class="hljs-params">--stdin</span> linux44<br>%end<br><br>%packages<br>@development<br><br>%end<br>[root@node1 ~]<span class="hljs-comment"># ksvalidator /data/myiso/myks.cfg                // 检查是否有语法错误</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>(3) 生成自制光盘</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-type">##</span>使用<span class="hljs-variable">mkisofs</span>命令生成自制光盘<br><span class="hljs-punctuation">[</span><span class="hljs-variable">root</span><span class="hljs-operator">@</span><span class="hljs-variable">node1</span> <span class="hljs-operator">~</span><span class="hljs-punctuation">]</span><span class="hljs-type">#</span> <span class="hljs-variable">mkisofs</span> <span class="hljs-operator">-</span><span class="hljs-variable">R</span> <span class="hljs-operator">-</span><span class="hljs-variable">J</span> <span class="hljs-operator">-</span><span class="hljs-variable">T</span> <span class="hljs-operator">-</span><span class="hljs-variable">v</span> <span class="hljs-operator">--</span><span class="hljs-variable">no</span><span class="hljs-operator">-</span><span class="hljs-variable">emul</span><span class="hljs-operator">-</span><span class="hljs-variable">boot</span> <span class="hljs-operator">--</span><span class="hljs-variable">boot</span><span class="hljs-operator">-</span><span class="hljs-variable">load</span><span class="hljs-operator">-</span><span class="hljs-variable">size</span> <span class="hljs-number">4</span> <span class="hljs-operator">--</span><span class="hljs-variable">boot</span><span class="hljs-operator">-</span><span class="hljs-variable">info</span><span class="hljs-operator">-</span><span class="hljs-variable">table</span> <span class="hljs-operator">-</span><span class="hljs-variable">V</span> <span class="hljs-string">&quot;centos 7.6 x86_64 boot&quot;</span> <span class="hljs-operator">-</span><span class="hljs-variable">b</span> <span class="hljs-variable">isolinux</span><span class="hljs-operator">/</span><span class="hljs-variable">isolinux</span><span class="hljs-operator">.</span><span class="hljs-variable">bin</span> <span class="hljs-operator">-</span><span class="hljs-variable">c</span> <span class="hljs-variable">isolinux</span><span class="hljs-operator">/</span><span class="hljs-variable">boot</span><span class="hljs-operator">.</span><span class="hljs-variable">cat</span> <span class="hljs-operator">-</span><span class="hljs-variable">o</span> <span class="hljs-operator">/</span><span class="hljs-variable">root</span><span class="hljs-operator">/</span><span class="hljs-variable">myiso</span><span class="hljs-operator">.</span><span class="hljs-variable">iso</span> <span class="hljs-operator">/</span><span class="hljs-variable">data</span><span class="hljs-operator">/</span><span class="hljs-variable">myiso</span><span class="hljs-operator">/</span><br><span class="hljs-built_in">I</span><span class="hljs-operator">:</span> <span class="hljs-operator">-</span><span class="hljs-variable">input</span><span class="hljs-operator">-</span><span class="hljs-variable">charset</span> <span class="hljs-variable">not</span> <span class="hljs-variable">specified</span><span class="hljs-operator">,</span> <span class="hljs-variable">using</span> <span class="hljs-variable">utf</span><span class="hljs-operator">-</span><span class="hljs-number">8</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">detected</span> <span class="hljs-variable">in</span> <span class="hljs-variable">locale</span> <span class="hljs-variable">settings</span><span class="hljs-punctuation">)</span><br><span class="hljs-variable">genisoimage</span> <span class="hljs-number">1.1</span><span class="hljs-number">.11</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">Linux</span><span class="hljs-punctuation">)</span><br><span class="hljs-variable">Scanning</span> <span class="hljs-operator">/</span><span class="hljs-variable">data</span><span class="hljs-operator">/</span><span class="hljs-variable">myiso</span><span class="hljs-operator">/</span><br><span class="hljs-variable">Scanning</span> <span class="hljs-operator">/</span><span class="hljs-variable">data</span><span class="hljs-operator">/</span><span class="hljs-variable">myiso</span><span class="hljs-operator">/</span><span class="hljs-variable">isolinux</span><br><span class="hljs-variable">Excluded</span> <span class="hljs-variable">by</span> <span class="hljs-variable">match</span><span class="hljs-operator">:</span> <span class="hljs-operator">/</span><span class="hljs-variable">data</span><span class="hljs-operator">/</span><span class="hljs-variable">myiso</span><span class="hljs-operator">/</span><span class="hljs-variable">isolinux</span><span class="hljs-operator">/</span><span class="hljs-variable">boot</span><span class="hljs-operator">.</span><span class="hljs-variable">cat</span><br><span class="hljs-variable">Excluded</span><span class="hljs-operator">:</span> <span class="hljs-operator">/</span><span class="hljs-variable">data</span><span class="hljs-operator">/</span><span class="hljs-variable">myiso</span><span class="hljs-operator">/</span><span class="hljs-variable">isolinux</span><span class="hljs-operator">/</span><span class="hljs-variable">TRANS</span><span class="hljs-operator">.</span><span class="hljs-variable">TBL</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-variable">Initial</span> <span class="hljs-variable">Padblock</span>                        <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">0</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-variable">Initial</span> <span class="hljs-variable">Padblock</span>                        <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">16</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-variable">Primary</span> <span class="hljs-built_in">Volume</span> <span class="hljs-variable">Descriptor</span>               <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">16</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-variable">Primary</span> <span class="hljs-built_in">Volume</span> <span class="hljs-variable">Descriptor</span>               <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">1</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-variable">Eltorito</span> <span class="hljs-built_in">Volume</span> <span class="hljs-variable">Descriptor</span>              <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">17</span><br><span class="hljs-variable">Size</span> <span class="hljs-variable">of</span> <span class="hljs-variable">boot</span> <span class="hljs-variable">image</span> <span class="hljs-variable">is</span> <span class="hljs-number">4</span> <span class="hljs-variable">sectors</span> <span class="hljs-operator">-&gt;</span> <span class="hljs-variable">No</span> <span class="hljs-variable">emulation</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-variable">Eltorito</span> <span class="hljs-built_in">Volume</span> <span class="hljs-variable">Descriptor</span>              <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">1</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-variable">Joliet</span> <span class="hljs-built_in">Volume</span> <span class="hljs-variable">Descriptor</span>                <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">18</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-variable">Joliet</span> <span class="hljs-built_in">Volume</span> <span class="hljs-variable">Descriptor</span>                <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">1</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">End</span> <span class="hljs-built_in">Volume</span> <span class="hljs-variable">Descriptor</span>                   <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">19</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-built_in">End</span> <span class="hljs-built_in">Volume</span> <span class="hljs-variable">Descriptor</span>                   <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">1</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">Version</span> <span class="hljs-variable">block</span>                           <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">20</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Version</span> <span class="hljs-variable">block</span>                           <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">1</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">Path</span> <span class="hljs-variable">table</span>                              <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">21</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Path</span> <span class="hljs-variable">table</span>                              <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">4</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-variable">Joliet</span> <span class="hljs-variable">path</span> <span class="hljs-variable">table</span>                       <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">25</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-variable">Joliet</span> <span class="hljs-variable">path</span> <span class="hljs-variable">table</span>                       <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">4</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">Directory</span> <span class="hljs-variable">tree</span>                          <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">29</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Directory</span> <span class="hljs-variable">tree</span>                          <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">2</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-variable">Joliet</span> <span class="hljs-variable">directory</span> <span class="hljs-variable">tree</span>                   <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">31</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-variable">Joliet</span> <span class="hljs-variable">directory</span> <span class="hljs-variable">tree</span>                   <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">2</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">Directory</span> <span class="hljs-variable">tree</span> <span class="hljs-variable">cleanup</span>                  <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">33</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Directory</span> <span class="hljs-variable">tree</span> <span class="hljs-variable">cleanup</span>                  <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">0</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">Extension</span> <span class="hljs-variable">record</span>                        <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">33</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Extension</span> <span class="hljs-variable">record</span>                        <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">1</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-variable">The</span> <span class="hljs-built_in">File</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>                             <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">34</span><br> <span class="hljs-number">17.11</span><span class="hljs-operator">%</span> <span class="hljs-variable">done</span><span class="hljs-operator">,</span> <span class="hljs-variable">estimate</span> <span class="hljs-variable">finish</span> <span class="hljs-variable">Sun</span> <span class="hljs-variable">Jul</span> <span class="hljs-number">17</span> <span class="hljs-number">13</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-number">17</span> <span class="hljs-number">2022</span><br> <span class="hljs-number">34.15</span><span class="hljs-operator">%</span> <span class="hljs-variable">done</span><span class="hljs-operator">,</span> <span class="hljs-variable">estimate</span> <span class="hljs-variable">finish</span> <span class="hljs-variable">Sun</span> <span class="hljs-variable">Jul</span> <span class="hljs-number">17</span> <span class="hljs-number">13</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-number">17</span> <span class="hljs-number">2022</span><br> <span class="hljs-number">51.24</span><span class="hljs-operator">%</span> <span class="hljs-variable">done</span><span class="hljs-operator">,</span> <span class="hljs-variable">estimate</span> <span class="hljs-variable">finish</span> <span class="hljs-variable">Sun</span> <span class="hljs-variable">Jul</span> <span class="hljs-number">17</span> <span class="hljs-number">13</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-number">17</span> <span class="hljs-number">2022</span><br> <span class="hljs-number">68.28</span><span class="hljs-operator">%</span> <span class="hljs-variable">done</span><span class="hljs-operator">,</span> <span class="hljs-variable">estimate</span> <span class="hljs-variable">finish</span> <span class="hljs-variable">Sun</span> <span class="hljs-variable">Jul</span> <span class="hljs-number">17</span> <span class="hljs-number">13</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-number">17</span> <span class="hljs-number">2022</span><br> <span class="hljs-number">85.38</span><span class="hljs-operator">%</span> <span class="hljs-variable">done</span><span class="hljs-operator">,</span> <span class="hljs-variable">estimate</span> <span class="hljs-variable">finish</span> <span class="hljs-variable">Sun</span> <span class="hljs-variable">Jul</span> <span class="hljs-number">17</span> <span class="hljs-number">13</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-number">17</span> <span class="hljs-number">2022</span><br><span class="hljs-built_in">Total</span> <span class="hljs-variable">translation</span> <span class="hljs-variable">table</span> <span class="hljs-variable">size</span><span class="hljs-operator">:</span> <span class="hljs-number">4703</span><br><span class="hljs-built_in">Total</span> <span class="hljs-variable">rockridge</span> <span class="hljs-variable">attributes</span> <span class="hljs-variable">bytes</span><span class="hljs-operator">:</span> <span class="hljs-number">1440</span><br><span class="hljs-built_in">Total</span> <span class="hljs-variable">directory</span> <span class="hljs-variable">bytes</span><span class="hljs-operator">:</span> <span class="hljs-number">2048</span><br><span class="hljs-built_in">Path</span> <span class="hljs-variable">table</span> <span class="hljs-variable">size</span><span class="hljs-punctuation">(</span><span class="hljs-variable">bytes</span><span class="hljs-punctuation">)</span><span class="hljs-operator">:</span> <span class="hljs-number">26</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-variable">The</span> <span class="hljs-built_in">File</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>                             <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">29112</span><br><span class="hljs-variable">Writing</span><span class="hljs-operator">:</span>   <span class="hljs-variable">Ending</span> <span class="hljs-variable">Padblock</span>                         <span class="hljs-variable">Start</span> <span class="hljs-built_in">Block</span> <span class="hljs-number">29146</span><br><span class="hljs-variable">Done</span> <span class="hljs-variable">with</span><span class="hljs-operator">:</span> <span class="hljs-variable">Ending</span> <span class="hljs-variable">Padblock</span>                         <span class="hljs-built_in">Block</span><span class="hljs-punctuation">(</span><span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>    <span class="hljs-number">150</span><br><span class="hljs-built_in">Max</span> <span class="hljs-variable">brk</span> <span class="hljs-variable">space</span> <span class="hljs-variable">used</span> <span class="hljs-number">0</span><br><span class="hljs-number">29296</span> <span class="hljs-variable">extents</span> <span class="hljs-variable">written</span> <span class="hljs-punctuation">(</span><span class="hljs-number">57</span> <span class="hljs-variable">MB</span><span class="hljs-punctuation">)</span><br><span class="hljs-punctuation">[</span><span class="hljs-variable">root</span><span class="hljs-operator">@</span><span class="hljs-variable">node1</span> <span class="hljs-operator">~</span><span class="hljs-punctuation">]</span><span class="hljs-type">#</span> <span class="hljs-variable">ll</span><br><span class="hljs-variable">total</span> <span class="hljs-number">58600</span><br><span class="hljs-operator">-</span><span class="hljs-variable">rw</span><span class="hljs-operator">-------.</span> <span class="hljs-number">1</span> <span class="hljs-variable">root</span> <span class="hljs-variable">root</span>     <span class="hljs-number">1420</span> <span class="hljs-variable">Jun</span> <span class="hljs-number">29</span> <span class="hljs-number">05</span><span class="hljs-operator">:</span><span class="hljs-number">55</span> <span class="hljs-variable">anaconda</span><span class="hljs-operator">-</span><span class="hljs-variable">ks</span><span class="hljs-operator">.</span><span class="hljs-variable">cfg</span><br><span class="hljs-operator">-</span><span class="hljs-variable">rw</span><span class="hljs-operator">-</span><span class="hljs-variable">r</span><span class="hljs-operator">--</span><span class="hljs-variable">r</span><span class="hljs-operator">--</span>  <span class="hljs-number">1</span> <span class="hljs-variable">root</span> <span class="hljs-variable">root</span>     <span class="hljs-number">3332</span> <span class="hljs-variable">Jul</span> <span class="hljs-number">16</span> <span class="hljs-number">18</span><span class="hljs-operator">:</span><span class="hljs-number">31</span> <span class="hljs-variable">ks7</span><span class="hljs-operator">.</span><span class="hljs-variable">cfg</span><br><span class="hljs-operator">-</span><span class="hljs-variable">rw</span><span class="hljs-operator">-</span><span class="hljs-variable">r</span><span class="hljs-operator">--</span><span class="hljs-variable">r</span><span class="hljs-operator">--</span>  <span class="hljs-number">1</span> <span class="hljs-variable">root</span> <span class="hljs-variable">root</span> <span class="hljs-number">59994112</span> <span class="hljs-variable">Jul</span> <span class="hljs-number">17</span> <span class="hljs-number">00</span><span class="hljs-operator">:</span><span class="hljs-number">04</span> <span class="hljs-variable">myiso</span><span class="hljs-operator">.</span><span class="hljs-variable">iso</span><br></code></pre></td></tr></table></figure>
+
+<p>在新建虚拟时选择自制光盘镜像文件myiso.iso，启动后效果如图</p>
+<p><img src="image-20220717132136349.png" srcset="/img/loading.gif" lazyload alt="image-20220717132136349"></p>
+<p><img src="image-20220717140332441.png" srcset="/img/loading.gif" lazyload alt="image-20220717140332441"></p>
+<p>安装异常停止了。</p>
+<h3 id="PXE方式"><a href="#PXE方式" class="headerlink" title="PXE方式"></a>PXE方式</h3><p>(1) 准备PXE启动相关文件</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs gradle">[root@node1 ~]# cp <span class="hljs-regexp">/data/myi</span>so<span class="hljs-regexp">/isolinux/</span>&#123;vmlinuz,initrd.img&#125; <span class="hljs-regexp">/var/</span>lib<span class="hljs-regexp">/tftpboot/</span><br>[root@node1 ~]# cp <span class="hljs-regexp">/data/myi</span>so<span class="hljs-regexp">/isolinux/</span><span class="hljs-regexp">/isolinux.cfg /</span>var<span class="hljs-regexp">/lib/</span>tftpboot<span class="hljs-regexp">/pxelinux.cfg/</span><span class="hljs-keyword">default</span><br>[root@node1 ~]# ll <span class="hljs-regexp">/var/</span>lib<span class="hljs-regexp">/tftpboot/</span><br>total <span class="hljs-number">57928</span><br>-rw-r--r-- <span class="hljs-number">1</span> root root <span class="hljs-number">52584760</span> Jul <span class="hljs-number">17</span> <span class="hljs-number">01</span>:<span class="hljs-number">18</span> initrd.img<br>-rw-r--r-- <span class="hljs-number">1</span> root root    <span class="hljs-number">55140</span> Jul <span class="hljs-number">17</span> <span class="hljs-number">01</span>:<span class="hljs-number">15</span> menu.c32<br>-rw-r--r-- <span class="hljs-number">1</span> root root    <span class="hljs-number">26759</span> Jul <span class="hljs-number">17</span> <span class="hljs-number">01</span>:<span class="hljs-number">15</span> pxelinux.<span class="hljs-number">0</span><br>drwxr-xr-x <span class="hljs-number">2</span> root root       <span class="hljs-number">21</span> Jul <span class="hljs-number">17</span> <span class="hljs-number">01</span>:<span class="hljs-number">19</span> pxelinux.cfg<br>-rwxr-xr-x <span class="hljs-number">1</span> root root  <span class="hljs-number">6639904</span> Jul <span class="hljs-number">17</span> <span class="hljs-number">01</span>:<span class="hljs-number">18</span> vmlinuz<br>[root@node1 ~]# tree <span class="hljs-regexp">/var/</span>lib<span class="hljs-regexp">/tftpboot/</span><br><span class="hljs-regexp">/var/</span>lib<span class="hljs-regexp">/tftpboot/</span><br>├── initrd.img<br>├── menu.c32<br>├── pxelinux.<span class="hljs-number">0</span><br>├── pxelinux.cfg<br>│   └── <span class="hljs-keyword">default</span><br>└── vmlinuz<br><br><span class="hljs-number">1</span> directory, <span class="hljs-number">5</span> files<br></code></pre></td></tr></table></figure>
+
+<p>(2) 准备启动菜单</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">[root@node1 ~]# yum install <span class="hljs-keyword">system</span>-config-kickstart     // 一个图形化的工具，可以生成kickstart`配置文件，需要安装一下，<span class="hljs-number">100</span>多个包<br>[root@node1 ~]# <span class="hljs-keyword">system</span>-config-kickstart                // 在linux系统不能直接打开，<br>Could <span class="hljs-keyword">not</span> <span class="hljs-keyword">open</span> display because <span class="hljs-keyword">no</span> X <span class="hljs-keyword">server</span> <span class="hljs-keyword">is</span> running.<br>Try running <span class="hljs-string">&#x27;system-config-kickstart --help&#x27;</span> <span class="hljs-keyword">for</span> a list <span class="hljs-keyword">of</span> <span class="hljs-keyword">options</span>.<br><br>在linux里打开一个图形界面，在windows系统显示:<br>[root@node1 ~]# export DISPLAY=<span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.9</span>:<span class="hljs-number">0.0</span><br>You have <span class="hljs-built_in">new</span> mail <span class="hljs-keyword">in</span> /var/spool/mail/root<br>[root@node1 ~]# <span class="hljs-keyword">system</span>-config-kickstart <br>/usr/<span class="hljs-keyword">share</span>/<span class="hljs-keyword">system</span>-config-kickstart/kickstartGui.py:<span class="hljs-number">104</span>: GtkWarning: GtkSpinButton: setting an adjustment <span class="hljs-keyword">with</span> non-zero page size <span class="hljs-keyword">is</span> deprecated<br>  <span class="hljs-type">xml</span> = gtk.glade.XML (&quot;/usr/share/system-config-kickstart/system-config-kickstart.glade&quot;, <span class="hljs-keyword">domain</span>=&quot;system-config-kickstart&quot;)<br>Loaded plugins: fastestmirror<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img src="image-20220716153229566.png" srcset="/img/loading.gif" lazyload alt="image-20220716153229566"></p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs gradle">[root@node1 ~]# systemctl start httpd<br>[root@node1 ~]# mkidr -p <span class="hljs-regexp">/var/</span>www<span class="hljs-regexp">/html/</span>centos<span class="hljs-regexp">/7/</span>os<span class="hljs-regexp">/x86_64/</span><br>[root@node1 ~]# tree -L <span class="hljs-number">4</span> <span class="hljs-regexp">/var/</span>www<span class="hljs-regexp">/html/</span> <br><span class="hljs-regexp">/var/</span>www<span class="hljs-regexp">/html/</span><br>└── centos<br>    ├── <span class="hljs-number">6</span><br>    │   └── os<br>    │       └── x86_64<br>    ├── <span class="hljs-number">7</span><br>    │   └── os<br>    │       └── x86_64<br>    └── <span class="hljs-number">8</span><br>        └── os<br>            └── x86_64<br><br><span class="hljs-number">10</span> directories, <span class="hljs-number">0</span> files<br>[root@node1 ~]# vim <span class="hljs-regexp">/etc/</span>fstab <br><span class="hljs-regexp">/dev/</span>cdrom  <span class="hljs-regexp">/var/</span>www<span class="hljs-regexp">/html/</span>centos<span class="hljs-regexp">/7/</span>os<span class="hljs-regexp">/x86_64/</span>   iso9660 defaults	<span class="hljs-number">0</span> <span class="hljs-number">0</span><br>[root@node1 ~]# mount -a<br>mount: <span class="hljs-regexp">/dev/</span>sr0 is <span class="hljs-keyword">write</span>-<span class="hljs-keyword">protected</span>, mounting <span class="hljs-keyword">read</span>-only<br>[root@node1 ~]# df -h<br>Filesystem                   <span class="hljs-keyword">Size</span>  Used Avail Use% Mounted on<br><span class="hljs-regexp">/dev/m</span>apper<span class="hljs-regexp">/centos-root       17G  1.7G   16G  10% /</span><br>devtmpfs                     <span class="hljs-number">475</span>M     <span class="hljs-number">0</span>  <span class="hljs-number">475</span>M   <span class="hljs-number">0</span>% /dev<br>tmpfs                        <span class="hljs-number">487</span>M     <span class="hljs-number">0</span>  <span class="hljs-number">487</span>M   <span class="hljs-number">0</span>% <span class="hljs-regexp">/dev/</span>shm<br>tmpfs                        <span class="hljs-number">487</span>M   <span class="hljs-number">14</span>M  <span class="hljs-number">473</span>M   <span class="hljs-number">3</span>% /run<br>tmpfs                        <span class="hljs-number">487</span>M     <span class="hljs-number">0</span>  <span class="hljs-number">487</span>M   <span class="hljs-number">0</span>% <span class="hljs-regexp">/sys/</span>fs/cgroup<br><span class="hljs-regexp">/dev/</span>sda1                   <span class="hljs-number">1014</span>M  <span class="hljs-number">133</span>M  <span class="hljs-number">882</span>M  <span class="hljs-number">14</span>% /boot<br><span class="hljs-regexp">/dev/m</span>apper<span class="hljs-regexp">/vg_data-lv_data  976M  509M  400M  57% /</span>home<br>tmpfs                         <span class="hljs-number">98</span>M     <span class="hljs-number">0</span>   <span class="hljs-number">98</span>M   <span class="hljs-number">0</span>% <span class="hljs-regexp">/run/u</span>ser/<span class="hljs-number">0</span><br><span class="hljs-regexp">/dev/</span>sr0                     <span class="hljs-number">4.3</span>G  <span class="hljs-number">4.3</span>G     <span class="hljs-number">0</span> <span class="hljs-number">100</span>% <span class="hljs-regexp">/var/</span>www<span class="hljs-regexp">/html/</span>centos<span class="hljs-regexp">/7/</span>os/x86_64<br></code></pre></td></tr></table></figure>
+
+
+
+<p>至此，仓库已准备好</p>
+<p><img src="image-20220716160716779.png" srcset="/img/loading.gif" lazyload alt="image-20220716160716779"></p>
+<p><img src="image-20220716160913498.png" srcset="/img/loading.gif" lazyload alt="image-20220716160913498"></p>
+<p><img src="image-20220716161928275.png" srcset="/img/loading.gif" lazyload alt="image-20220716161928275"></p>
+<p>在图形界面大概配置完成后，保存生成ks7.cfg文件。图形界面修改yum的配置不是很方便，可以继续在文件里做配置修改。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">[root@node1 ~]<span class="hljs-comment"># vim /root/ks7.cfg </span><br><br><span class="hljs-comment">#platform=x86, AMD64, or Intel EM64T</span><br><span class="hljs-comment">#version=DEVEL</span><br><span class="hljs-comment"># Install OS instead of upgrade</span><br>install<br><span class="hljs-comment"># Keyboard layouts</span><br>keyboard &#x27;us&#x27;<br><span class="hljs-comment"># Root password</span><br>rootpw <span class="hljs-params">--plaintext</span> 123456         <span class="hljs-string">//</span> 明文的密码<br><span class="hljs-comment"># System language</span><br>lang en_US<br><span class="hljs-comment"># System authorization information</span><br>auth  <span class="hljs-params">--useshadow</span>  <span class="hljs-params">--passalgo=md5</span><br><span class="hljs-comment"># Use text mode install</span><br>text                            <span class="hljs-string">//</span> 文本安装<br>firstboot <span class="hljs-params">--disable</span><br><span class="hljs-comment"># SELinux configuration</span><br>selinux <span class="hljs-params">--disabled</span>               <span class="hljs-string">//</span> 禁用selinux<br><br><br><span class="hljs-comment"># Firewall configuration</span><br>firewall <span class="hljs-params">--disabled</span>              <span class="hljs-string">//</span> 禁用防火墙<br><span class="hljs-comment"># Network information</span><br>network  <span class="hljs-params">--bootproto=dhcp</span> <span class="hljs-params">--device=eth1</span>   <br>network  <span class="hljs-params">--bootproto=dhcp</span> <span class="hljs-params">--device=eth0</span><br><span class="hljs-comment"># Reboot after installation</span><br>reboot<br><span class="hljs-comment"># System timezone</span><br>timezone Africa/Abidjan<br><span class="hljs-comment"># Use network installation</span><br>url <span class="hljs-params">--url=</span><span class="hljs-string">&quot;http://192.168.23.101/centos/7/os/x86_64/&quot;</span>    <span class="hljs-string">//</span> yum仓库路径<br><span class="hljs-comment"># System bootloader configuration</span><br>bootloader <span class="hljs-params">--append=</span><span class="hljs-string">&quot;net.ifnames=0&quot;</span> <span class="hljs-params">--location=mbr</span>     <span class="hljs-string">//</span> bootloader的内核参数加上了，网卡名称是eth了<br><span class="hljs-comment"># Clear the Master Boot Record</span><br>zerombr<br><span class="hljs-comment"># Partition clearing information</span><br>clearpart <span class="hljs-params">--all</span><br><span class="hljs-comment"># Disk partitioning information</span><br>part / <span class="hljs-params">--fstype=</span><span class="hljs-string">&quot;xfs&quot;</span> <span class="hljs-params">--size=10000</span><br>part <span class="hljs-string">/boot</span> <span class="hljs-params">--fstype=</span><span class="hljs-string">&quot;xfs&quot;</span> <span class="hljs-params">--size=1000</span><br>part swap <span class="hljs-params">--fstype=</span><span class="hljs-string">&quot;swap&quot;</span> <span class="hljs-params">--size=2048</span><br><br>%post<br>mkdir <span class="hljs-string">/etc/yum.repos.d/bak</span><br>mv <span class="hljs-string">/etc/yum.repos.d/</span>*<span class="hljs-string">.repo</span> <span class="hljs-string">/etc/yum.repos.d/bak</span><br>cat &gt; <span class="hljs-string">/etc/yum.repos.d/base.repo</span> &lt;&lt;EOF                 <span class="hljs-string">//</span> 在文件中增加了yum配置文件的内容<br>[base]<br>name=CentOS-$releasever - Base<br>mirrorlist=http:<span class="hljs-string">//mirrorlist.centos.org/</span>?release=$releasever&amp;arch=$basearch&amp;repo=os&amp;infra=$infra<br><span class="hljs-comment">#baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/</span><br>gpgcheck=1<br>gpgkey=file:<span class="hljs-string">///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><br><span class="hljs-comment">#released updates </span><br>[updates]<br>name=CentOS-$releasever - Updates<br>mirrorlist=http:<span class="hljs-string">//mirrorlist.centos.org/</span>?release=$releasever&amp;arch=$basearch&amp;repo=updates&amp;infra=$infra<br><span class="hljs-comment">#baseurl=http://mirror.centos.org/centos/$releasever/updates/$basearch/</span><br>gpgcheck=1<br>gpgkey=file:<span class="hljs-string">///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><br><span class="hljs-comment">#additional packages that may be useful</span><br>[extras]<br>name=CentOS-$releasever - Extras<br>mirrorlist=http:<span class="hljs-string">//mirrorlist.centos.org/</span>?release=$releasever&amp;arch=$basearch&amp;repo=extras&amp;infra=$infra<br><span class="hljs-comment">#baseurl=http://mirror.centos.org/centos/$releasever/extras/$basearch/</span><br>gpgcheck=1<br>gpgkey=file:<span class="hljs-string">///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><br><span class="hljs-comment">#additional packages that extend functionality of existing packages</span><br>[centosplus]<br>name=CentOS-$releasever - Plus<br>mirrorlist=http:<span class="hljs-string">//mirrorlist.centos.org/</span>?release=$releasever&amp;arch=$basearch&amp;repo=centosplus&amp;infra=$infra<br><span class="hljs-comment">#baseurl=http://mirror.centos.org/centos/$releasever/centosplus/$basearch/</span><br>gpgcheck=1<br>enabled=0<br>gpgkey=file:<span class="hljs-string">///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><br>EOF<br>mkdir <span class="hljs-string">/root/.ssh/</span> -m 700                            <span class="hljs-string">//</span>配置基于key验证登录系统<br>cat &gt; <span class="hljs-string">/root/.ssh/authorized_keys</span> &lt;&lt;EOF<br>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXHaEV3kmyS7qCYw+OcYjBEAXPJ+CLLB+cI/0Az2sASKXXEMk7KwTHrqgC9YEsDLKn4zMU9i1qt3jzdqExigs8y7S7FAe0xFpkJhumywIMHXKgiYiSSw3mI94hVp3x2recGkMXoQrvaY2iPj3iKBZCINQxQ1+sO+JbLlTEWAH+drwDGuCe+MZGcYYCHJw4f2l+hifhKIGDIFB2/rxvEBG8sqTuZrD5RKeMiTodnJREyf2gchrwMb3fUIu0K3kNafN9eR8IQch3AGoe524k9Rvm0S37iQHOft6jgJI59IHBjDqQQUiLba/FDAo7PaS0rFo2XsAYmQZ0FHLqwvIoAYBH root@node1<br>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDciEtJ5mQ7qEKcGSkdxYRzl2vsEDaDDo0Xr+QIRm8Fw7YjTK3QClTiAmiKMpxk3hwovxIgtyOGwuu/<span class="hljs-string">/umXdJs3jvUGyaOXx6AOOzF4gvMInA94YBN0OeVFwVdgmxl3BpqIINAeK6</span>+UVeaF2RfP6aiXNNohZ8z5tuKp/3bhpsv9V4G1X8Xff5TXVwlwr6R1IPVxtjoj5CwjmQrgjMmxfPkrlZUKfxtcGHqsg9Q9kCKaa6H9e+Ur9owjiu5xe+dnqxDUbbFa1MsJ9PK9U4PWig1mPuKaExd8TwmTgk50LyYnA4NyDg9rq0j8KmOmjtp1buEpPlxGvYV1/tPxyd3qorqP root@node1<br>EOF<br>chmod 600 <span class="hljs-string">/root/.ssh/authorized_keys</span><br>useradd linux44                                   <span class="hljs-string">//</span> 创建账号<br><span class="hljs-keyword">echo</span> 123456 |passwd <span class="hljs-params">--stdin</span> linux44<br>%end<br><br>%packages<br>@development<br><br>%end<br>[root@node1 ~]<span class="hljs-comment"># ksvalidator ks7.cfg                // 检查是否有语法错误</span><br></code></pre></td></tr></table></figure>
+
+<p>应答文件中有语法错误的范例：</p>
+<figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs julia">[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># ksvalidator ks7.cfg </span><br>The following problem occurred on line <span class="hljs-number">89</span> of the kickstart file:<br><br>Section %post does not <span class="hljs-keyword">end</span> with %<span class="hljs-keyword">end</span>.<br><br>[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># tail -5 ks7.cfg </span><br><br>%packages<br><span class="hljs-meta">@development</span><br><br>%<span class="hljs-keyword">end</span><br>[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># tail -7 ks7.cfg </span><br>useradd <span class="hljs-number">123456</span> |passwd --<span class="hljs-literal">stdin</span> linux44<br><span class="hljs-keyword">end</span>                                         // 前面少了一个%<br><br>%packages<br><span class="hljs-meta">@development</span><br><br>%<span class="hljs-keyword">end</span><br>[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># vim ks7.cfg </span><br>[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># tail -7 ks7.cfg </span><br>useradd <span class="hljs-number">123456</span> |passwd --<span class="hljs-literal">stdin</span> linux44<br>%<span class="hljs-keyword">end</span><br><br>%packages<br><span class="hljs-meta">@development</span><br><br>%<span class="hljs-keyword">end</span><br>[root<span class="hljs-meta">@node1</span> ~]<span class="hljs-comment"># ksvalidator ks7.cfg            // 加上之后，在检查就没有报错了。</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-attr">[root@node1 ~]</span># ll /<span class="hljs-selector-tag">var</span>/www/<span class="hljs-selector-tag">html</span>/ks/<br>total <span class="hljs-number">4</span><br>-rw-r<span class="hljs-attr">--r--</span> <span class="hljs-number">1</span> root root <span class="hljs-number">3335</span> Jul <span class="hljs-number">16</span> <span class="hljs-number">18</span>:<span class="hljs-number">02</span> ks7.cfg<br></code></pre></td></tr></table></figure>
+
+<p><img src="image-20220716180339254.png" srcset="/img/loading.gif" lazyload alt="image-20220716180339254"></p>
+<p>保证应答文件能访问</p>
+<p><img src="image-20220716180453972.png" srcset="/img/loading.gif" lazyload alt="image-20220716180453972"></p>
+<p><img src="image-20220716180526477.png" srcset="/img/loading.gif" lazyload alt="image-20220716180526477"></p>
+<p><img src="image-20220716181130801.png" srcset="/img/loading.gif" lazyload alt="image-20220716181130801"></p>
+<p><img src="image-20220716183850547.png" srcset="/img/loading.gif" lazyload alt="image-20220716183850547"></p>
+<p>这时候会自动通过网络，从搭建的服务器上下载ks7.cfg这个应答文件，从而自动安装系统。</p>
+<p><img src="image-20220716181520061.png" srcset="/img/loading.gif" lazyload alt="image-20220716181520061"></p>
+<p>系统启动后，环境验证</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs pf">[root@node1 ~]<span class="hljs-comment"># ssh 192.168.23.10</span><br>The authenticity of host &#x27;<span class="hljs-number">192.168</span>.<span class="hljs-number">23.10</span> (<span class="hljs-number">192.168</span>.<span class="hljs-number">23.10</span>)&#x27; can&#x27;t be established.<br>ECDSA key fingerprint is SHA256:XaE+xPJC5Wg+o+<span class="hljs-number">2</span>/c27tNKbZSJ7iQbKzUZrFv23mMVs.<br>ECDSA key fingerprint is MD5:<span class="hljs-number">6</span>b:f8:<span class="hljs-number">30</span>:<span class="hljs-number">77</span>:<span class="hljs-number">62</span>:<span class="hljs-number">6</span>f:<span class="hljs-number">3</span>d:<span class="hljs-number">22</span>:<span class="hljs-number">3</span>c:<span class="hljs-number">5</span>a:e3:<span class="hljs-number">8</span>d:<span class="hljs-number">6</span>a:<span class="hljs-number">5</span>f:<span class="hljs-number">89</span>:<span class="hljs-number">07</span>.<br>Are you sure you want <span class="hljs-keyword">to</span> continue connecting (yes/<span class="hljs-keyword">no</span>)? yes<br>Warning: Permanently added &#x27;<span class="hljs-number">192.168</span>.<span class="hljs-number">23.10</span>&#x27; (ECDSA) <span class="hljs-keyword">to</span> the list of known hosts.<br>Last login: Sat Jul <span class="hljs-number">16</span> <span class="hljs-number">11</span>:<span class="hljs-number">00</span>:<span class="hljs-number">26</span> <span class="hljs-number">2022</span><br>[root@localhost ~]<span class="hljs-comment"># ip a</span><br><span class="hljs-number">1</span>: lo: <span class="hljs-variable">&lt;LOOPBACK,UP,LOWER_UP&gt;</span> mtu <span class="hljs-number">65536</span> qdisc noqueue <span class="hljs-keyword">state</span> UNKNOWN <span class="hljs-keyword">group</span> <span class="hljs-keyword">default</span> qlen <span class="hljs-number">1000</span><br>    link/loopback <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> brd <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><br>    <span class="hljs-keyword">inet</span> <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>/<span class="hljs-number">8</span> scope host lo<br>       valid_lft forever preferred_lft forever<br>    <span class="hljs-keyword">inet6</span> ::<span class="hljs-number">1</span>/<span class="hljs-number">128</span> scope host <br>       valid_lft forever preferred_lft forever<br><span class="hljs-number">2</span>: eth0: <span class="hljs-variable">&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;</span> mtu <span class="hljs-number">1500</span> qdisc pfifo_fast <span class="hljs-keyword">state</span> UP <span class="hljs-keyword">group</span> <span class="hljs-keyword">default</span> qlen <span class="hljs-number">1000</span><br>    link/ether <span class="hljs-number">00</span>:<span class="hljs-number">0</span>c:<span class="hljs-number">29</span>:<span class="hljs-number">04</span>:<span class="hljs-number">96</span>:b8 brd ff:ff:ff:ff:ff:ff<br>    <span class="hljs-keyword">inet</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">23.10</span>/<span class="hljs-number">24</span> brd <span class="hljs-number">192.168</span>.<span class="hljs-number">23.255</span> scope <span class="hljs-keyword">global</span> noprefixroute dynamic eth0<br>       valid_lft <span class="hljs-number">1575</span>sec preferred_lft <span class="hljs-number">1575</span>sec<br>    <span class="hljs-keyword">inet6</span> fe80::cbf8:<span class="hljs-number">3</span>ae0:<span class="hljs-number">364</span>f:<span class="hljs-number">527</span>e/<span class="hljs-number">64</span> scope link noprefixroute <br>       valid_lft forever preferred_lft forever<br>[root@localhost ~]<span class="hljs-comment"># getenforce</span><br>Disabled<br>[root@localhost ~]<span class="hljs-comment"># cat /etc/selinux/config |grep SELINUX</span><br><span class="hljs-comment"># SELINUX= can take one of these three values:</span><br>SELINUX=disabled<br><span class="hljs-comment"># SELINUXTYPE= can take one of three values:</span><br>SELINUXTYPE=targeted<br>[root@localhost ~]<span class="hljs-comment"># service status firewalld</span><br>The service command supports only <span class="hljs-keyword">basic</span> LSB actions (start, stop, restart, try-restart, reload, force-reload, status). For other actions, please try <span class="hljs-keyword">to</span> use systemctl.<br>[root@localhost ~]<span class="hljs-comment"># systemctl status firewalld</span><br>● firewalld.service - firewalld - dynamic firewall daemon<br>   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)<br>   Active: inactive (dead)<br>     Docs: man:firewalld(<span class="hljs-number">1</span>)<br>[root@localhost ~]<span class="hljs-comment"># service firewalld status</span><br>Redirecting <span class="hljs-keyword">to</span> /bin/systemctl status firewalld.service<br>● firewalld.service - firewalld - dynamic firewall daemon<br>   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)<br>   Active: inactive (dead)<br>     Docs: man:firewalld(<span class="hljs-number">1</span>)<br>[root@localhost ~]<span class="hljs-comment"># id linux44</span><br>uid=<span class="hljs-number">1000</span>(linux44) gid=<span class="hljs-number">1000</span>(linux44) groups=<span class="hljs-number">1000</span>(linux44)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Cobbler方式"><a href="#Cobbler方式" class="headerlink" title="Cobbler方式"></a>Cobbler方式</h3><h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%B0%B1%E4%B8%9A-%E7%8E%8B%E6%99%93%E6%98%A5/">云计算就业-王晓春</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/">自动化部署</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/07/17/%E6%90%AD%E5%BB%BAchrony%E6%9C%8D%E5%8A%A1%E5%AE%8C%E6%88%90%E5%A4%9A%E4%B8%AA%E4%B8%BB%E6%9C%BA%E7%9A%84%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">搭建chrony服务完成多个主机的时间同步</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/09/%E5%A4%9A%E8%8A%82%E7%82%B9%E4%B9%8B%E9%97%B4%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/">
+                        <span class="hidden-mobile">多节点之间免密登录</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

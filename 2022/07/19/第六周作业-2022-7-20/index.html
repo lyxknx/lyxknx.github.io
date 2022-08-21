@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="背景：报全程班和单就业的小伙伴，本周建议学习内容：第二十三天、第二十四天、第二十五天、第二十六天。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第六周作业-2022-7-20">
+<meta property="og:url" content="http://example.com/2022/07/19/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A-2022-7-20/index.html">
+<meta property="og:site_name" content="5-12 23:30">
+<meta property="og:description" content="背景：报全程班和单就业的小伙伴，本周建议学习内容：第二十三天、第二十四天、第二十五天、第二十六天。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/07/19/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A-2022-7-20/image-20220808210700319.png">
+<meta property="article:published_time" content="2022-07-19T22:43:14.000Z">
+<meta property="article:modified_time" content="2022-08-14T14:01:17.952Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="mysql数据库">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2022/07/19/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A-2022-7-20/image-20220808210700319.png">
+  
+  
+  <title>第六周作业-2022-7-20 - 5-12 23:30</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="第六周作业-2022-7-20">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-19 22:43" pubdate>
+        July 19, 2022 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      17k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      145 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">第六周作业-2022-7-20</h1>
+            
+            <div class="markdown-body">
+              <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>：报全程班和单就业的小伙伴，本周建议学习内容：第二十三天、第二十四天、第二十五天、第二十六天。</p>
+<span id="more"></span>
+
+<p>请同学们完成作业后，将博客作业提交到此链接：<a target="_blank" rel="noopener" href="https://www.wjx.top/vj/POHTQOH.aspx">https://www.wjx.top/vj/POHTQOH.aspx</a></p>
+<h1 id="章节内容"><a href="#章节内容" class="headerlink" title="章节内容"></a>章节内容</h1><p>第二十三天<br>Mysql数据库一<br>1、Mysql安装和安全加固<br>2、Mysql的基本使用和二进制安装<br>3、Mysql的编译安装和SQL语言介绍<br>4、Mysql多实例和SQL语句分类<br>5、SQL的数据库管理和表创建<br>6、DML和DQL语句<br>7、SQL的单表和多表查询”<br>“第二十四天：<br>Mysql数据库二<br>1、Mysql的视图函数存储过程触发器和事件管理<br>2、Mysql用户和权限管理<br>3、Mysql架构和存储引擎<br>4、Mysql的索引结构<br>5、Mysql索引管理和相关工具<br>6、Mysql锁管理和事务<br>7、事务日志管理和报错日志”<br>“第二十五天<br>Mysql数据库三<br>1、Mysql的通用日志和慢查询日志及二进制日志<br>2、Mysql二进制日志管理<br>3、Mysql备份类型和原理<br>4、Mysql备份和还原<br>5、Mysql备份还原实战<br>6、xtrabackup备份工具实战<br>7、Mysql主从复制原理和实现”<br>“第二十六天：<br>Mysql数据库四<br>1、Mysql主从复制实现和故障排错<br>2、Mysql级联复制和主主复制架构实现<br>3、Mysql的半同步复制和复制过滤器<br>4、Mysql主从复制问题和Mysql分库分表原理<br>5、MYCAT实现Mysql读写分离<br>6、MHA实现Mysql的高可用性”    </p>
+<h1 id="作业："><a href="#作业：" class="headerlink" title="作业："></a>作业：</h1><h2 id="1、简述DDL-DML-DCL-DQL，并且说明mysql各个关键字查询时候的先后顺序"><a href="#1、简述DDL-DML-DCL-DQL，并且说明mysql各个关键字查询时候的先后顺序" class="headerlink" title="1、简述DDL,DML,DCL,DQL，并且说明mysql各个关键字查询时候的先后顺序"></a>1、简述DDL,DML,DCL,DQL，并且说明mysql各个关键字查询时候的先后顺序</h2><p>DDL:  Data Defination Language 数据定义语言。<br> 包含的命令有 CREATE，DROP，ALTER。分别用于创建、删除和修改数据库、表、用户或其它对象。</p>
+<p>DML: Data Manipulation Language 数据操纵语言。<br>包含的命令有 INSERT，DELETE，UPDATE。 软件开发：CRUD。主要用来编辑某个表的数据，分别用于插入、删除、修改记录。</p>
+<p>DCL：Data Control Language 数据控制语言。<br> 包含的命令有GRANT，REVOKE。分别用于授权和吊销用户的权限，可以授权用户将权限转授予其他用户。</p>
+<p>DQL：Data Query Language 数据查询语言<br>最常用的是 SELECT，用于查看表和变量中的数据，也可以配合关键字对表中 数据进行搜索、过滤。</p>
+<p>关键字包含：</p>
+<p>WHERE：按数值过滤查找相应行。</p>
+<p>GROUP BY：根据指定的条件把查询结果进行“分组”以用于做“聚合”运算，一旦分组，select语句后只跟分组的字段和聚合函。</p>
+<p>HAVING:   对分组聚合运算后的结果指定过滤条件。</p>
+<p>LIMIT[[offset,]row_count]:  对查询的结果进行输出行数数量限制，跳过offet，显示row_count。</p>
+<p>SELECT 语句处理的顺序：</p>
+<figure class="highlight sas"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs sas"><span class="hljs-keyword">FROM</span> Clause --&gt; <span class="hljs-keyword">WHERE</span> Clause --&gt; <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> --&gt; <span class="hljs-keyword">HAVING</span> Clause --&gt; SELECCT --&gt; <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> --&gt; LIMIT <br></code></pre></td></tr></table></figure>
+
+<p><img src="image-20220808210700319.png" srcset="/img/loading.gif" lazyload alt="image-20220808210700319"></p>
+<h2 id="2、自行设计10个sql查询语句，需要用到关键字-GROUP-BY-HAVING-ORDER-BY-LIMIT-，至少同时用到两个。"><a href="#2、自行设计10个sql查询语句，需要用到关键字-GROUP-BY-HAVING-ORDER-BY-LIMIT-，至少同时用到两个。" class="headerlink" title="2、自行设计10个sql查询语句，需要用到关键字[GROUP BY/HAVING/ORDER BY/LIMIT]，至少同时用到两个。"></a>2、自行设计10个sql查询语句，需要用到关键字[GROUP BY/HAVING/ORDER BY/LIMIT]，至少同时用到两个。</h2><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">mysql&gt; use hellodb;<br>Database changed<br>mysql&gt; show tables;<br>+-------------------+<br>|<span class="hljs-string"> Tables_in_hellodb </span>|<br>+-------------------+<br>|<span class="hljs-string"> classes           </span>|<br>|<span class="hljs-string"> coc               </span>|<br>|<span class="hljs-string"> courses           </span>|<br>|<span class="hljs-string"> scores            </span>|<br>|<span class="hljs-string"> students          </span>|<br>|<span class="hljs-string"> teachers          </span>|<br>|<span class="hljs-string"> toc               </span>|<br>+-------------------+<br>7 rows in set (0.00 sec)<br>mysql&gt; select <span class="hljs-symbol">*</span> from students;<br>+-------+---------------+-----+--------+---------+-----------+<br>|<span class="hljs-string"> StuID </span>|<span class="hljs-string"> Name          </span>|<span class="hljs-string"> Age </span>|<span class="hljs-string"> Gender </span>|<span class="hljs-string"> ClassID </span>|<span class="hljs-string"> TeacherID </span>|<br>+-------+---------------+-----+--------+---------+-----------+<br>|<span class="hljs-string">     1 </span>|<span class="hljs-string"> Shi Zhongyu   </span>|<span class="hljs-string">  22 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       2 </span>|<span class="hljs-string">         3 </span>|<br>|<span class="hljs-string">     2 </span>|<span class="hljs-string"> Shi Potian    </span>|<span class="hljs-string">  22 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       1 </span>|<span class="hljs-string">         7 </span>|<br>|<span class="hljs-string">     3 </span>|<span class="hljs-string"> Xie Yanke     </span>|<span class="hljs-string">  53 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       2 </span>|<span class="hljs-string">        16 </span>|<br>|<span class="hljs-string">     4 </span>|<span class="hljs-string"> Ding Dian     </span>|<span class="hljs-string">  32 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       4 </span>|<span class="hljs-string">         4 </span>|<br>|<span class="hljs-string">     5 </span>|<span class="hljs-string"> Yu Yutong     </span>|<span class="hljs-string">  26 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       3 </span>|<span class="hljs-string">         1 </span>|<br>|<span class="hljs-string">     6 </span>|<span class="hljs-string"> Shi Qing      </span>|<span class="hljs-string">  46 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       5 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">     7 </span>|<span class="hljs-string"> Xi Ren        </span>|<span class="hljs-string">  19 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       3 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">     8 </span>|<span class="hljs-string"> Lin Daiyu     </span>|<span class="hljs-string">  17 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       7 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">     9 </span>|<span class="hljs-string"> Ren Yingying  </span>|<span class="hljs-string">  20 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       6 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    10 </span>|<span class="hljs-string"> Yue Lingshan  </span>|<span class="hljs-string">  19 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       3 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    11 </span>|<span class="hljs-string"> Yuan Chengzhi </span>|<span class="hljs-string">  23 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       6 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    12 </span>|<span class="hljs-string"> Wen Qingqing  </span>|<span class="hljs-string">  19 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       1 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    13 </span>|<span class="hljs-string"> Tian Boguang  </span>|<span class="hljs-string">  33 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       2 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    14 </span>|<span class="hljs-string"> Lu Wushuang   </span>|<span class="hljs-string">  17 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       3 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    15 </span>|<span class="hljs-string"> Duan Yu       </span>|<span class="hljs-string">  19 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       4 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    16 </span>|<span class="hljs-string"> Xu Zhu        </span>|<span class="hljs-string">  21 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       1 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    17 </span>|<span class="hljs-string"> Lin Chong     </span>|<span class="hljs-string">  25 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       4 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    18 </span>|<span class="hljs-string"> Hua Rong      </span>|<span class="hljs-string">  23 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       7 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    19 </span>|<span class="hljs-string"> Xue Baochai   </span>|<span class="hljs-string">  18 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       6 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    20 </span>|<span class="hljs-string"> Diao Chan     </span>|<span class="hljs-string">  19 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       7 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    21 </span>|<span class="hljs-string"> Huang Yueying </span>|<span class="hljs-string">  22 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       6 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    22 </span>|<span class="hljs-string"> Xiao Qiao     </span>|<span class="hljs-string">  20 </span>|<span class="hljs-string"> F      </span>|<span class="hljs-string">       1 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    23 </span>|<span class="hljs-string"> Ma Chao       </span>|<span class="hljs-string">  23 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       4 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    24 </span>|<span class="hljs-string"> Xu Xian       </span>|<span class="hljs-string">  27 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">    NULL </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">    25 </span>|<span class="hljs-string"> Sun Dasheng   </span>|<span class="hljs-string"> 100 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">    NULL </span>|<span class="hljs-string">      NULL </span>|<br>+-------+---------------+-----+--------+---------+-----------+<br>25 rows in set (0.00 sec)<br><br>mysql&gt; show tables;<br>+-------------------+<br>|<span class="hljs-string"> Tables_in_hellodb </span>|<br>+-------------------+<br>|<span class="hljs-string"> classes           </span>|<br>|<span class="hljs-string"> coc               </span>|<br>|<span class="hljs-string"> courses           </span>|<br>|<span class="hljs-string"> scores            </span>|<br>|<span class="hljs-string"> students          </span>|<br>|<span class="hljs-string"> teachers          </span>|<br>|<span class="hljs-string"> toc               </span>|<br>+-------------------+<br>7 rows in set (0.00 sec)<br><br>mysql&gt; select <span class="hljs-symbol">*</span> from scores;<br>+----+-------+----------+-------+<br>|<span class="hljs-string"> ID </span>|<span class="hljs-string"> StuID </span>|<span class="hljs-string"> CourseID </span>|<span class="hljs-string"> Score </span>|<br>+----+-------+----------+-------+<br>|<span class="hljs-string">  1 </span>|<span class="hljs-string">     1 </span>|<span class="hljs-string">        2 </span>|<span class="hljs-string">    77 </span>|<br>|<span class="hljs-string">  2 </span>|<span class="hljs-string">     1 </span>|<span class="hljs-string">        6 </span>|<span class="hljs-string">    93 </span>|<br>|<span class="hljs-string">  3 </span>|<span class="hljs-string">     2 </span>|<span class="hljs-string">        2 </span>|<span class="hljs-string">    47 </span>|<br>|<span class="hljs-string">  4 </span>|<span class="hljs-string">     2 </span>|<span class="hljs-string">        5 </span>|<span class="hljs-string">    97 </span>|<br>|<span class="hljs-string">  5 </span>|<span class="hljs-string">     3 </span>|<span class="hljs-string">        2 </span>|<span class="hljs-string">    88 </span>|<br>|<span class="hljs-string">  6 </span>|<span class="hljs-string">     3 </span>|<span class="hljs-string">        6 </span>|<span class="hljs-string">    75 </span>|<br>|<span class="hljs-string">  7 </span>|<span class="hljs-string">     4 </span>|<span class="hljs-string">        5 </span>|<span class="hljs-string">    71 </span>|<br>|<span class="hljs-string">  8 </span>|<span class="hljs-string">     4 </span>|<span class="hljs-string">        2 </span>|<span class="hljs-string">    89 </span>|<br>|<span class="hljs-string">  9 </span>|<span class="hljs-string">     5 </span>|<span class="hljs-string">        1 </span>|<span class="hljs-string">    39 </span>|<br>|<span class="hljs-string"> 10 </span>|<span class="hljs-string">     5 </span>|<span class="hljs-string">        7 </span>|<span class="hljs-string">    63 </span>|<br>|<span class="hljs-string"> 11 </span>|<span class="hljs-string">     6 </span>|<span class="hljs-string">        1 </span>|<span class="hljs-string">    96 </span>|<br>|<span class="hljs-string"> 12 </span>|<span class="hljs-string">     7 </span>|<span class="hljs-string">        1 </span>|<span class="hljs-string">    86 </span>|<br>|<span class="hljs-string"> 13 </span>|<span class="hljs-string">     7 </span>|<span class="hljs-string">        7 </span>|<span class="hljs-string">    83 </span>|<br>|<span class="hljs-string"> 14 </span>|<span class="hljs-string">     8 </span>|<span class="hljs-string">        4 </span>|<span class="hljs-string">    57 </span>|<br>|<span class="hljs-string"> 15 </span>|<span class="hljs-string">     8 </span>|<span class="hljs-string">        3 </span>|<span class="hljs-string">    93 </span>|<br>+----+-------+----------+-------+<br>15 rows in set (0.00 sec)<br><br><span class="hljs-comment">#在students表中，查询年龄大于25岁，且为男性的同学的名字和年龄，年龄从小到大进行排序</span><br>mysql&gt; select name,age from students where age&gt;25 and gender=&#x27;M&#x27; order by age;<br>+--------------+-----+<br>|<span class="hljs-string"> name         </span>|<span class="hljs-string"> age </span>|<br>+--------------+-----+<br>|<span class="hljs-string"> Yu Yutong    </span>|<span class="hljs-string">  26 </span>|<br>|<span class="hljs-string"> Xu Xian      </span>|<span class="hljs-string">  27 </span>|<br>|<span class="hljs-string"> Ding Dian    </span>|<span class="hljs-string">  32 </span>|<br>|<span class="hljs-string"> Tian Boguang </span>|<span class="hljs-string">  33 </span>|<br>|<span class="hljs-string"> Shi Qing     </span>|<span class="hljs-string">  46 </span>|<br>|<span class="hljs-string"> Xie Yanke    </span>|<span class="hljs-string">  53 </span>|<br>|<span class="hljs-string"> Sun Dasheng  </span>|<span class="hljs-string"> 100 </span>|<br>+--------------+-----+<br>7 rows in set (0.00 sec)<br><br><span class="hljs-comment"># 以ClassID为分组依据，显示每组的平均年龄，且只查看平均年龄大于30的班级</span><br>mysql&gt; select classid,avg(age) from students group by classid having avg(age)&gt;30;<br>+---------+----------+<br>|<span class="hljs-string"> classid </span>|<span class="hljs-string"> avg(age) </span>|<br>+---------+----------+<br>|<span class="hljs-string">    NULL </span>|<span class="hljs-string">  63.5000 </span>|<br>|<span class="hljs-string">       2 </span>|<span class="hljs-string">  36.0000 </span>|<br>|<span class="hljs-string">       5 </span>|<span class="hljs-string">  46.0000 </span>|<br>+---------+----------+<br>3 rows in set (0.00 sec)<br><br><br>mysql&gt; select avg(age) from students;<br>+----------+<br>|<span class="hljs-string"> avg(age) </span>|<br>+----------+<br>|<span class="hljs-string">  27.4000 </span>|<br>+----------+<br>1 row in set (0.00 sec)<br><br>mysql&gt; select <span class="hljs-symbol">*</span> from students where age &gt; (select avg(age) from students) order by Age;<br>+-------+--------------+-----+--------+---------+-----------+<br>|<span class="hljs-string"> StuID </span>|<span class="hljs-string"> Name         </span>|<span class="hljs-string"> Age </span>|<span class="hljs-string"> Gender </span>|<span class="hljs-string"> ClassID </span>|<span class="hljs-string"> TeacherID </span>|<br>+-------+--------------+-----+--------+---------+-----------+<br>|<span class="hljs-string">     4 </span>|<span class="hljs-string"> Ding Dian    </span>|<span class="hljs-string">  32 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       4 </span>|<span class="hljs-string">         4 </span>|<br>|<span class="hljs-string">    13 </span>|<span class="hljs-string"> Tian Boguang </span>|<span class="hljs-string">  33 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       2 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">     6 </span>|<span class="hljs-string"> Shi Qing     </span>|<span class="hljs-string">  46 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       5 </span>|<span class="hljs-string">      NULL </span>|<br>|<span class="hljs-string">     3 </span>|<span class="hljs-string"> Xie Yanke    </span>|<span class="hljs-string">  53 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">       2 </span>|<span class="hljs-string">        16 </span>|<br>|<span class="hljs-string">    25 </span>|<span class="hljs-string"> Sun Dasheng  </span>|<span class="hljs-string"> 100 </span>|<span class="hljs-string"> M      </span>|<span class="hljs-string">    NULL </span>|<span class="hljs-string">      NULL </span>|<br>+-------+--------------+-----+--------+---------+-----------+<br>5 rows in set (0.00 sec)<br><br><span class="hljs-comment">#查看年龄大于平均年龄的同学的姓名、年龄、班级，且年龄从小到大列出；</span><br>mysql&gt; select name,age,classid from students where age &gt; (select avg(age) from students) order by Age;<br>+--------------+-----+---------+<br>|<span class="hljs-string"> name         </span>|<span class="hljs-string"> age </span>|<span class="hljs-string"> classid </span>|<br>+--------------+-----+---------+<br>|<span class="hljs-string"> Ding Dian    </span>|<span class="hljs-string">  32 </span>|<span class="hljs-string">       4 </span>|<br>|<span class="hljs-string"> Tian Boguang </span>|<span class="hljs-string">  33 </span>|<span class="hljs-string">       2 </span>|<br>|<span class="hljs-string"> Shi Qing     </span>|<span class="hljs-string">  46 </span>|<span class="hljs-string">       5 </span>|<br>|<span class="hljs-string"> Xie Yanke    </span>|<span class="hljs-string">  53 </span>|<span class="hljs-string">       2 </span>|<br>|<span class="hljs-string"> Sun Dasheng  </span>|<span class="hljs-string"> 100 </span>|<span class="hljs-string">    NULL </span>|<br>+--------------+-----+---------+<br>5 rows in set (0.00 sec)<br><br><span class="hljs-comment">#以ClassID分组，显示每班的同学的人数，只看最多人的5个班</span><br>mysql&gt; select classid, count(<span class="hljs-symbol">*</span>) from students group by classid order by count(<span class="hljs-symbol">*</span>) desc limit 5;<br>+---------+----------+<br>|<span class="hljs-string"> classid </span>|<span class="hljs-string"> count(*) </span>|<br>+---------+----------+<br>|<span class="hljs-string">       1 </span>|<span class="hljs-string">        4 </span>|<br>|<span class="hljs-string">       4 </span>|<span class="hljs-string">        4 </span>|<br>|<span class="hljs-string">       3 </span>|<span class="hljs-string">        4 </span>|<br>|<span class="hljs-string">       6 </span>|<span class="hljs-string">        4 </span>|<br>|<span class="hljs-string">       2 </span>|<span class="hljs-string">        3 </span>|<br>+---------+----------+<br>5 rows in set (0.00 sec)<br><br><span class="hljs-comment"># 查看未成年人都有哪些？</span><br>mysql&gt; select classid,age from students where Age <span class="hljs-variable">&lt; 18;</span><br><span class="hljs-variable">+---------+-----+</span><br><span class="hljs-variable">| classid | age |</span><br><span class="hljs-variable">+---------+-----+</span><br><span class="hljs-variable">|       7 |  17 |</span><br><span class="hljs-variable">|       3 |  17 |</span><br><span class="hljs-variable">+---------+-----+</span><br><span class="hljs-variable">2 rows in set (0.00 sec)</span><br><span class="hljs-variable"></span><br><span class="hljs-variable"></span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、xtrabackup备份和还原数据库练习"><a href="#3、xtrabackup备份和还原数据库练习" class="headerlink" title="3、xtrabackup备份和还原数据库练习"></a>3、xtrabackup备份和还原数据库练习</h2><p>xtrabackup：由Percona提供支持对InnoDB做热备(物理备份)的工具，支持完全备份、增量备份，是惟一开源的能够对innodb和xtradb数据库进行热备的工具。</p>
+<p>利用xtrabackup8.0 完全，增量备份及还原MySQL：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-number">1</span> 备份过程<br><span class="hljs-number">1</span>）完全备份：<br>[root@centos8 ~]#yum -y install percona-xtrabackup-<span class="hljs-number">24</span>-<span class="hljs-number">2.4</span>.<span class="hljs-number">20</span>-<span class="hljs-number">1</span>.el8.x86_64.rpm<br>[root@centos8 ~]#mkdir <span class="hljs-regexp">/backup/</span><br>[root@centos8 ~]#xtrabackup -uroot -pmagedu --backup --target-dir=<span class="hljs-regexp">/backup/</span>base<br><span class="hljs-number">2</span>）第一次修改数据<br><span class="hljs-number">3</span>）第一次增量备份<br>[root@centos8 ~]#xtrabackup -uroot -pmagedu --backup --target-dir=<span class="hljs-regexp">/backup/i</span>nc1 --<br>incremental-basedir=<span class="hljs-regexp">/backup/</span>base<br><span class="hljs-number">4</span>）第二次修改数据<br><span class="hljs-number">5</span>）第二次增量<br>[root@centos8 ~]#xtrabackup -uroot -pmagedu --backup --target-dir=<span class="hljs-regexp">/backup/i</span>nc2 --<br>incremental-basedir=<span class="hljs-regexp">/backup/i</span>nc1<br><span class="hljs-number">6</span>）[root@centos8 ~]#scp -r <span class="hljs-regexp">/backup/</span>* 目标主机:<span class="hljs-regexp">/backup/</span><br>#备份过程生成三个备份目录<br><span class="hljs-regexp">/backup/</span>&#123;base，inc1，inc2&#125;<br><span class="hljs-number">2</span>还原过程<br><span class="hljs-number">1</span>）预准备完成备份，此选项--apply-log-only 阻止回滚未完成的事务<br>[root@centos8 ~]#yum -y install percona-xtrabackup-<span class="hljs-number">24</span>-<span class="hljs-number">2.4</span>.<span class="hljs-number">20</span>-<span class="hljs-number">1</span>.el8.x86_64.rpm<br>[root@centos8 ~]#xtrabackup --prepare --apply-log-only --target-dir=<span class="hljs-regexp">/backup/</span>base<br><span class="hljs-number">2</span>）合并第<span class="hljs-number">1</span>次增量备份到完全备份<br>[root@centos8 ~]#xtrabackup --prepare --apply-log-only --target-dir=<span class="hljs-regexp">/backup/</span>base <br>--incremental-dir=<span class="hljs-regexp">/backup/i</span>nc1<br><span class="hljs-number">3</span>）合并第<span class="hljs-number">2</span>次增量备份到完全备份：最后一次还原不需要加选项--apply-log-only<br>[root@centos8 ~]#xtrabackup --prepare --target-dir=<span class="hljs-regexp">/backup/</span>base --incrementaldir=<span class="hljs-regexp">/backup/i</span>nc2<br><span class="hljs-number">4</span>）复制到数据库目录，注意数据库目录必须为空，MySQL服务不能启动<br>[root@centos8 ~]#xtrabackup --<span class="hljs-keyword">copy</span>-back --target-dir=<span class="hljs-regexp">/backup/</span>base<br><span class="hljs-number">5</span>）还原属性：<br>[root@centos8 ~]#chown -R mysql:mysql <span class="hljs-regexp">/var/</span>lib/mysql<br><span class="hljs-number">6</span>）启动服务：<br>[root@centos8 ~]#service mysqld start <br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="4、实现mysql主从复制，主主复制和半同步复制"><a href="#4、实现mysql主从复制，主主复制和半同步复制" class="headerlink" title="4、实现mysql主从复制，主主复制和半同步复制"></a>4、实现mysql主从复制，主主复制和半同步复制</h2><h3 id="主从复制"><a href="#主从复制" class="headerlink" title="主从复制"></a>主从复制</h3><p>主从架构实现读写分离，主节点只负责写，从节点只负责读，每个节点都有相同的数据集，向外扩展，基于二进制日志的单向复制</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">#主节点<br>#修改主节点配置文件<br>[root@centos8 ~]$vim /etc/my.cnf<br><span class="hljs-meta">[mysqld]</span><br>server-id=150  <br>log-bin       #确保启用二进制日志<br>[root@centos8 ~]$systemctl restart mysqld<br><br>#查看二进制文件和位置<br><span class="hljs-section">mysql&gt; show master logs;</span><br><span class="hljs-section">+--------------------+-----------+-----------+</span><br><span class="hljs-section">| Log_name           | File_size | Encrypted |</span><br><span class="hljs-section">+--------------------+-----------+-----------+</span><br>| centos8-bin.000001 |       179 | No        |<br><span class="hljs-section">| centos8-bin.000002 |       156 | No        |</span><br><span class="hljs-section">+--------------------+-----------+-----------+</span><br><br>#创建用于主从复制的用户（此步也被记录在二进制文件中，从节点可省去此步）<br>mysql&gt;create user <span class="hljs-emphasis">&#x27;repl&#x27;</span>@<span class="hljs-emphasis">&#x27;10.0.0.%&#x27;</span>;<br>mysql&gt;grant replication slave on <span class="hljs-strong">*.*</span> to <span class="hljs-emphasis">&#x27;repl&#x27;</span>@<span class="hljs-emphasis">&#x27;10.0.0.%&#x27;</span>;<br><br><br>#从节点<br>#修改从节点配置文件<br>[root@centos8 ~]$vim /etc/my.cnf<br><span class="hljs-meta">[mysqld]</span><br>server-id=157<br>log-bin <br>read_only=ON<br>[root@centos8 ~]$systemctl restart mysqld<br><br>#在mysql中配置主从复制，需要与上述信息对应<br>#一般情况还需要在master<span class="hljs-emphasis">_password中指定复制账号的密码，本次实验中未设置密码，所以省略</span><br><span class="hljs-emphasis">mysql&gt; change master to master_host=&#x27;10.0.0.150&#x27;, master_user=&#x27;repl&#x27; , master_port=3306, master_log_file=&#x27;centos8-bin.000002&#x27;,  master_log_</span>pos=156;<br><br>#查看是否成功<br>mysql&gt; start slave;<br>mysql&gt; show slave status\G<br><span class="hljs-bullet">*************************** </span>1. row <span class="hljs-strong">*****</span><span class="hljs-strong">*****</span><span class="hljs-strong">*****</span><span class="hljs-strong">*****</span><span class="hljs-strong">*****</span>**<br><span class="hljs-code">               Slave_IO_State: Waiting for source to send event</span><br><span class="hljs-code">                  Master_Host: 10.0.0.150</span><br><span class="hljs-code">                  Master_User: repl</span><br><span class="hljs-code">                  Master_Port: 3306</span><br><span class="hljs-code">                Connect_Retry: 60</span><br><span class="hljs-code">              Master_Log_File: centos8-bin.000002</span><br><span class="hljs-code">          Read_Master_Log_Pos: 612</span><br><span class="hljs-code">               Relay_Log_File: centos8-relay-bin.000002</span><br><span class="hljs-code">                Relay_Log_Pos: 782</span><br><span class="hljs-code">        Relay_Master_Log_File: centos8-bin.000002</span><br><span class="hljs-code">             Slave_IO_Running: Yes				#主从复制需要这两项线程</span><br><span class="hljs-code">            Slave_SQL_Running: Yes				#查看是否启动可判定配置是否成功	</span><br><br>#验证数据同步<br>#从节点<br><span class="hljs-section">mysql&gt; show databases;</span><br><span class="hljs-section">+--------------------+</span><br><span class="hljs-section">| Database           |</span><br><span class="hljs-section">+--------------------+</span><br>| information<span class="hljs-emphasis">_schema |</span><br><span class="hljs-emphasis">| mysql              |</span><br><span class="hljs-emphasis">| performance_</span>schema |<br><span class="hljs-section">| sys                |</span><br><span class="hljs-section">+--------------------+</span><br><br>#主节点<br>mysql&gt; create database hellodb;<br>Query OK, 1 row affected (0.01 sec)<br><br>mysql&gt; use hellodb;<br>Database changed<br>mysql&gt; create table students(stuid int,name varchar(20),age tinyint);<br>Query OK, 0 rows affected (0.01 sec)<br><br>mysql&gt; insert students values(1,<span class="hljs-emphasis">&#x27;zhangsan&#x27;</span>,20);<br>Query OK, 1 row affected (0.01 sec)<br><br>mysql&gt; insert students values(2,<span class="hljs-emphasis">&#x27;lisi&#x27;</span>,22);<br>Query OK, 1 row affected (0.01 sec)<br><br>#从节点<br>mysql&gt; use hellodb;<br>Reading table information for completion of table and column names<br>You can turn off this feature to get a quicker startup with -A<br><br>Database changed<br><span class="hljs-section">mysql&gt; select * from students;</span><br><span class="hljs-section">+-------+----------+------+</span><br><span class="hljs-section">| stuid | name     | age  |</span><br><span class="hljs-section">+-------+----------+------+</span><br>|     1 | zhangsan |   20 |<br><span class="hljs-section">|     2 | lisi     |   22 |</span><br><span class="hljs-section">+-------+----------+------+</span><br><br></code></pre></td></tr></table></figure>
+
+<h3 id="主主复制"><a href="#主主复制" class="headerlink" title="主主复制"></a>主主复制</h3><p>两个节点都可以读写数据，并且互相同步。相当于两个节点互为主从。</p>
+<p>​    双主架构容易产生数据不一致问题，同时进行某一操作时会导致产生冲突，之后无法进行任何操作。因此数据库实际使用时不会开启多个主节点，仅在主节点故障时启用另一个主节点替换。</p>
+<p>​    配置过程类似主从架构</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment">#第一个主节点</span><br>[root@centos8 ~]<span class="hljs-variable">$vim</span> /etc/my.cnf<br>[mysqld]<br><span class="hljs-attribute">server-id</span>=150<br>log-bin<br><span class="hljs-attribute">auto_increment_offset</span>=1         #设置自动增长id间隔<br><span class="hljs-attribute">auto_increment_increment</span>=2      #并不能完全解决双主冲突问题  <br>[root@centos8 ~]<span class="hljs-variable">$systemctl</span> restart mysqld<br><br><span class="hljs-comment">#查看二进制文件和位置</span><br>mysql&gt; show master logs;<br>+--------------------+-----------+-----------+<br>| Log_name           | File_size | Encrypted |<br>+--------------------+-----------+-----------+<br>| centos8-bin.000001 |       179 | <span class="hljs-literal">No</span>        |<br>| centos8-bin.000002 |       156 | <span class="hljs-literal">No</span>        |<br>+--------------------+-----------+-----------+<br><br><span class="hljs-comment">#创建用于主从复制的用户（此步也被记录在二进制文件中，从节点可省去此步）</span><br>mysql&gt;create<span class="hljs-built_in"> user </span><span class="hljs-string">&#x27;repl&#x27;</span>@<span class="hljs-string">&#x27;10.0.0.%&#x27;</span>;<br>mysql&gt;grant replication slave on *.* <span class="hljs-keyword">to</span> <span class="hljs-string">&#x27;repl&#x27;</span>@<span class="hljs-string">&#x27;10.0.0.%&#x27;</span>;<br><br><span class="hljs-comment">#第二个主节点</span><br>[root@centos8 ~]<span class="hljs-variable">$vim</span> /etc/my.cnf<br>[mysqld]<br><span class="hljs-attribute">server-id</span>=157<br>log-bin <br><span class="hljs-attribute">auto_increment_offset</span>=1        <br><span class="hljs-attribute">auto_increment_increment</span>=2        <br>[root@centos8 ~]<span class="hljs-variable">$systemctl</span> restart mysqld<br><br>mysql&gt; change master <span class="hljs-keyword">to</span> <span class="hljs-attribute">master_host</span>=<span class="hljs-string">&#x27;10.0.0.150&#x27;</span>, <span class="hljs-attribute">master_user</span>=<span class="hljs-string">&#x27;repl&#x27;</span> , <span class="hljs-attribute">master_port</span>=3306, <span class="hljs-attribute">master_log_file</span>=<span class="hljs-string">&#x27;centos8-bin.000002&#x27;</span>,  <span class="hljs-attribute">master_log_pos</span>=156;<br>mysql&gt; start slave;<br><span class="hljs-comment">#查看二进制文件和位置</span><br>mysql&gt; show master logs;<br>+---------------+-----------+-----------+<br>| Log_name      | File_size | Encrypted |<br>+---------------+-----------+-----------+<br>| binlog.000001 |       674 | <span class="hljs-literal">No</span>        |<br>+---------------+-----------+-----------+<br><br><br><span class="hljs-comment">#第一个主节点</span><br>mysql&gt; change master <span class="hljs-keyword">to</span> <span class="hljs-attribute">master_host</span>=<span class="hljs-string">&#x27;10.0.0.157&#x27;</span>, <span class="hljs-attribute">master_user</span>=<span class="hljs-string">&#x27;repl&#x27;</span> , <span class="hljs-attribute">master_port</span>=3306, <span class="hljs-attribute">master_log_file</span>=<span class="hljs-string">&#x27;binlog.000001&#x27;</span>,  <span class="hljs-attribute">master_log_pos</span>=674;<br>mysql&gt; start slave;<br><br><span class="hljs-comment">#此时已完成双主架构，可互相同步对方修改数据，但若在两个服务器上同时执行某个操作就会互相冲突，导致数据库瘫痪。</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="半同步复制"><a href="#半同步复制" class="headerlink" title="半同步复制"></a>半同步复制</h3><p>​    默认情况下，MySQL的复制功能是异步的，主库把binlog日志发送给从库即结束，并不验证从库是否接收完毕。这意味着当主服务器或从服务器端发生故障时，有可能从服务器没有接收到主服务器发送过来的binlog日志，这就会造成主服务器和从服务器的数据不一致，甚至在恢复时造成数据的丢失。</p>
+<p>​    若采用同步复制，即等到所有从库确认接收完毕后才告知用户成功则等待时间过长，性能不佳。综合考虑安全性和性能则采用半同步，则只要有一个从库确认接收完毕就判断复制成功，若等待时间过长超过设定的阈值也先告知用户成功。</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs gherkin"><span class="hljs-comment">#半同步复制可直接在上述主从架构的基础上建立，仅需安装相关插件并修改配置文件</span><br><br><span class="hljs-comment">#安装插件</span><br><span class="hljs-comment">#主节点</span><br>mysql&gt; INSTALL PLUGIN rpl_semi_sync_master SONAME &#x27;semisync_master.so&#x27;;	<br>mysql&gt; SET GLOBAL rpl_semi_sync_master_enabled=1;		<span class="hljs-comment">#临时修改</span><br>mysql&gt; SET GLOBAL rpl_semi_sync_master_timeout = 3000;  <span class="hljs-comment">#时间阈值3s</span><br>mysql&gt; SHOW GLOBAL VARIABLES LIKE &#x27;%semi%&#x27;;<br>+-------------------------------------------+------------+<br>|<span class="hljs-string"> Variable_name                             </span>|<span class="hljs-string"> Value      </span>|<br>+-------------------------------------------+------------+<br>|<span class="hljs-string"> rpl_semi_sync_master_enabled              </span>|<span class="hljs-string"> ON         </span>|<br>|<span class="hljs-string"> rpl_semi_sync_master_timeout              </span>|<span class="hljs-string"> 3000       </span>|<br>|<span class="hljs-string"> rpl_semi_sync_master_trace_level          </span>|<span class="hljs-string"> 32         </span>|<br>|<span class="hljs-string"> rpl_semi_sync_master_wait_for_slave_count </span>|<span class="hljs-string"> 1          </span>|<br>|<span class="hljs-string"> rpl_semi_sync_master_wait_no_slave        </span>|<span class="hljs-string"> ON         </span>|<br>|<span class="hljs-string"> rpl_semi_sync_master_wait_point           </span>|<span class="hljs-string"> AFTER_SYNC </span>|<br>+-------------------------------------------+------------+<br><span class="hljs-comment">#从节点</span><br>mysql&gt; install plugin rpl_semi_sync_slave SONAME &#x27;semisync_slave.so&#x27;;<br>mysql&gt; SET GLOBAL rpl_semi_sync_slave_enabled=1;<br>mysql&gt;  SHOW GLOBAL VARIABLES LIKE &#x27;%semi%&#x27;;<br>+---------------------------------+-------+<br>|<span class="hljs-string"> Variable_name                   </span>|<span class="hljs-string"> Value </span>|<br>+---------------------------------+-------+<br>|<span class="hljs-string"> rpl_semi_sync_slave_enabled     </span>|<span class="hljs-string"> ON    </span>|<br>|<span class="hljs-string"> rpl_semi_sync_slave_trace_level </span>|<span class="hljs-string"> 32    </span>|<br>+---------------------------------+-------+<br><br><br><span class="hljs-comment">#修改配置，在上述主从架构的配置文件中添加2条插件配置</span><br><span class="hljs-comment">#主节点</span><br>[root<span class="hljs-meta">@centos8</span> ~]$vim /etc/my.cnf<br>[mysqld]<br>server-id=150<br>log-bin<br>rpl_semi_sync_master_enabled=ON <span class="hljs-comment">#修改此行,需要先安装semisync_master.so插件后,再重启,否</span><br>则无法启动<br>rpl_semi_sync_master_timeout=3000   <span class="hljs-comment">#设置3s内无法同步，也将返回成功信息给客户端</span><br><br><span class="hljs-comment">#从节点</span><br>[root<span class="hljs-meta">@centos8</span> ~]$vim /etc/my.cnf<br>[mysqld]<br>server-id=157<br>log-bin<br>rpl_semi_sync_slave_enabled=ON <br><br><span class="hljs-comment">#修改配置后重启mysql服务生效</span><br><span class="hljs-comment">#从节点还需要重启slave</span><br>mysql&gt; stop slave;<br>mysql&gt; start slave;<br>mysql&gt; SHOW GLOBAL STATUS LIKE &#x27;%semi%&#x27;;<br>+----------------------------+-------+<br>|<span class="hljs-string"> Variable_name              </span>|<span class="hljs-string"> Value </span>|<br>+----------------------------+-------+<br>|<span class="hljs-string"> Rpl_semi_sync_slave_status </span>|<span class="hljs-string"> ON    </span>|<br>+----------------------------+-------+<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="5、用mycat实现mysql的读写分离"><a href="#5、用mycat实现mysql的读写分离" class="headerlink" title="5、用mycat实现mysql的读写分离"></a>5、用mycat实现mysql的读写分离</h2><p>​    Mycat是一个开源的分布式数据库系统，是一个实现了MySQL协议的服务器，前端用户可以把它看作是</p>
+<p>一个数据库代理（类似于Mysql Proxy），用MySQL客户端工具和命令行访问，而其后端可以用MySQL</p>
+<p>原生协议与多个MySQL服务器通信，也可以用JDBC协议与大多数主流数据库服务器通信，其核心功能是</p>
+<p>分表分库，即将一个大表水平分割为N个小表，存储在后端MySQL服务器里或者其他数据库里。</p>
+<h3 id="Mycat安装和配置"><a href="#Mycat安装和配置" class="headerlink" title="Mycat安装和配置"></a>Mycat安装和配置</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">[root@localhost ~]$yum install -y java<br>[root@localhost ~]$wget http://dl.mycat.org.cn/<span class="hljs-number">1.6</span><span class="hljs-number">.7</span><span class="hljs-number">.6</span>/<span class="hljs-number">20210303094759</span>/Mycat-<span class="hljs-keyword">server</span><span class="hljs-number">-1.6</span><span class="hljs-number">.7</span><span class="hljs-number">.6</span>-<span class="hljs-keyword">release</span><span class="hljs-number">-20210303094759</span>-linux.tar.gz<br>[root@localhost ~]$mkdir /apps<br>[root@localhost ~]$tar xvf Mycat-<span class="hljs-keyword">server</span><span class="hljs-number">-1.6</span><span class="hljs-number">.7</span><span class="hljs-number">.6</span>-<span class="hljs-keyword">release</span><span class="hljs-number">-20210303094759</span>-linux.tar.gz -C /apps/<br><br>#配置环境变量<br>[root@localhost ~]$echo <span class="hljs-string">&#x27;PATH=/apps/mycat/bin:$PATH&#x27;</span> &gt; /etc/profile.d/mycat.sh<br>[root@localhost ~]$source /etc/profile.d/mycat.sh<br>#查看日志确定启动是否成功<br>[root@localhost ~]$mycat <span class="hljs-keyword">start</span><br>[root@localhost ~]$tail /apps/mycat/logs/<span class="hljs-keyword">wrapper</span>.<span class="hljs-keyword">log</span><br><span class="hljs-keyword">INFO</span>   | jvm <span class="hljs-number">1</span>    | <span class="hljs-number">2022</span>/<span class="hljs-number">07</span>/<span class="hljs-number">20</span> <span class="hljs-number">21</span>:<span class="hljs-number">21</span>:<span class="hljs-number">55</span> | MyCAT <span class="hljs-keyword">Server</span> startup successfully. see logs <span class="hljs-keyword">in</span> logs/mycat.<span class="hljs-keyword">log</span><br><br>#此时其他客户端主机已可访问Mycat<br>[root@rhel ~]# mysql -uroot -p123456  -h <span class="hljs-number">10.0</span><span class="hljs-number">.0</span><span class="hljs-number">.152</span> -P8066 <span class="hljs-comment">--default_auth=mysql_native_password</span><br>mysql: [<span class="hljs-built_in">Warning</span>] <span class="hljs-keyword">Using</span> a <span class="hljs-keyword">password</span> <span class="hljs-keyword">on</span> the command <span class="hljs-type">line</span> interface can be insecure.<br>Welcome <span class="hljs-keyword">to</span> the MySQL monitor.  Commands <span class="hljs-keyword">end</span> <span class="hljs-keyword">with</span> ; <span class="hljs-keyword">or</span> \g.<br>Your MySQL <span class="hljs-keyword">connection</span> id <span class="hljs-keyword">is</span> <span class="hljs-number">6</span><br><span class="hljs-keyword">Server</span> <span class="hljs-keyword">version</span>: <span class="hljs-number">5.6</span><span class="hljs-number">.29</span>-mycat<span class="hljs-number">-1.6</span><span class="hljs-number">.7</span><span class="hljs-number">.6</span>-<span class="hljs-keyword">release</span><span class="hljs-number">-20210303094759</span> MyCat <span class="hljs-keyword">Server</span> (OpenCloudDB)<br><br>Copyright (c) <span class="hljs-number">2000</span>, <span class="hljs-number">2018</span>, Oracle <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> its affiliates. <span class="hljs-keyword">All</span> rights reserved.<br><br>Oracle <span class="hljs-keyword">is</span> a registered trademark <span class="hljs-keyword">of</span> Oracle Corporation <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> its<br>affiliates. Other names may be trademarks <span class="hljs-keyword">of</span> their respective<br>owners.<br><br><span class="hljs-keyword">Type</span> <span class="hljs-string">&#x27;help;&#x27;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&#x27;\h&#x27;</span> <span class="hljs-keyword">for</span> help. <span class="hljs-keyword">Type</span> <span class="hljs-string">&#x27;\c&#x27;</span> <span class="hljs-keyword">to</span> clear the <span class="hljs-keyword">current</span> <span class="hljs-keyword">input</span> <span class="hljs-keyword">statement</span>.<br>#此时看到的数据库在完成后续配置后将成为主从数据库的映射。用户访问看到的是主从服务器的内容<br>mysql&gt; <span class="hljs-keyword">show</span> databases;<br>+<span class="hljs-comment">----------+</span><br>| <span class="hljs-keyword">DATABASE</span> |<br>+<span class="hljs-comment">----------+</span><br>| TESTDB   |<br>+<span class="hljs-comment">----------+</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="在mycat-服务器上修改server-xml文件配置Mycat的连接信息"><a href="#在mycat-服务器上修改server-xml文件配置Mycat的连接信息" class="headerlink" title="在mycat 服务器上修改server.xml文件配置Mycat的连接信息"></a>在mycat 服务器上修改server.xml文件配置Mycat的连接信息</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs xml">[root@localhost ~]$vim /apps/mycat/conf/server.xml<br>...省略...<br>#修改下面行的8066改为3306复制到到独立非注释行<br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;serverPort&quot;</span>&gt;</span>3306<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;handlelDistributedTransactions&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span> #将上面行放在此行前面<br>#或者删除注释,并修改下面行的8066改为3306<br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;serverPort&quot;</span>&gt;</span>3306<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;managerPort&quot;</span>&gt;</span>9066<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;idleTimeout&quot;</span>&gt;</span>300000<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;authTimeout&quot;</span>&gt;</span>15000<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;bindIp&quot;</span>&gt;</span>0.0.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dataNodeIdleCheckPeriod&quot;</span>&gt;</span>300000<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span> #5 * 60 * 1000L; //连<br>接空闲检查 删除#后面此部分<br><span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;frontWriteQueueSize&quot;</span>&gt;</span>4096<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">property</span> </span><br><span class="hljs-tag"><span class="hljs-attr">name</span>=<span class="hljs-string">&quot;processors&quot;</span>&gt;</span>32<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span> #--&gt; 删除#后面此部分<br> .....<br><span class="hljs-tag">&lt;<span class="hljs-name">user</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span>                                       #连接Mycat的用户名<br>   <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>magedu<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>          #连接Mycat的密码<br>   <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;schemas&quot;</span>&gt;</span>TESTDB<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>           #数据库名要和schema.xml相对应<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="修改schema-xml实现读写分离策略"><a href="#修改schema-xml实现读写分离策略" class="headerlink" title="修改schema.xml实现读写分离策略"></a>修改schema.xml实现读写分离策略</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs xml">#修改多行后最终如下<br>[root@localhost ~]$vim /apps/mycat/conf/schema.xml<br><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span>?&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">mycat</span>:schema <span class="hljs-keyword">SYSTEM</span> <span class="hljs-string">&quot;schema.dtd&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mycat:schema</span> <span class="hljs-attr">xmlns:mycat</span>=<span class="hljs-string">&quot;http://io.mycat/&quot;</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">schema</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;TESTDB&quot;</span> <span class="hljs-attr">checkSQLschema</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">sqlMaxLimit</span>=<span class="hljs-string">&quot;100&quot;</span></span><br><span class="hljs-tag"><span class="hljs-attr">dataNode</span>=<span class="hljs-string">&quot;dn1&quot;</span>&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">schema</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">dataNode</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dn1&quot;</span> <span class="hljs-attr">dataHost</span>=<span class="hljs-string">&quot;localhost1&quot;</span> <span class="hljs-attr">database</span>=<span class="hljs-string">&quot;hellodb&quot;</span> /&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">dataHost</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;localhost1&quot;</span> <span class="hljs-attr">maxCon</span>=<span class="hljs-string">&quot;1000&quot;</span> <span class="hljs-attr">minCon</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">balance</span>=<span class="hljs-string">&quot;1&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">writeType</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">dbType</span>=<span class="hljs-string">&quot;mysql&quot;</span> <span class="hljs-attr">dbDriver</span>=<span class="hljs-string">&quot;native&quot;</span> <span class="hljs-attr">switchType</span>=<span class="hljs-string">&quot;1&quot;</span></span><br><span class="hljs-tag"><span class="hljs-attr">slaveThreshold</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">heartbeat</span>&gt;</span>select user()<span class="hljs-tag">&lt;/<span class="hljs-name">heartbeat</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">writeHost</span> <span class="hljs-attr">host</span>=<span class="hljs-string">&quot;host1&quot;</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;10.0.0.18:3306&quot;</span> <span class="hljs-attr">user</span>=<span class="hljs-string">&quot;root&quot;</span></span><br><span class="hljs-tag">   <span class="hljs-attr">password</span>=<span class="hljs-string">&quot;123456&quot;</span>&gt;</span><br>         <span class="hljs-tag">&lt;<span class="hljs-name">readHost</span> <span class="hljs-attr">host</span>=<span class="hljs-string">&quot;host2&quot;</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;10.0.0.28:3306&quot;</span> <span class="hljs-attr">user</span>=<span class="hljs-string">&quot;root&quot;</span></span><br><span class="hljs-tag"><span class="hljs-attr">password</span>=<span class="hljs-string">&quot;123456&quot;</span> /&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">writeHost</span>&gt;</span><br>   <span class="hljs-tag">&lt;/<span class="hljs-name">dataHost</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mycat:schema</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="主从节点配置"><a href="#主从节点配置" class="headerlink" title="主从节点配置"></a>主从节点配置</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">#主服务器为mycat服务创建账号并授权<br>#由于主从复制机制，从服务器上也进行了以下操作<br>mysql&gt; <span class="hljs-keyword">create</span> <span class="hljs-keyword">user</span> root@<span class="hljs-string">&#x27;10.0.0.%&#x27;</span> identified <span class="hljs-keyword">by</span> <span class="hljs-string">&#x27;123456&#x27;</span>;<br>mysql&gt; <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;10.0.0.%&#x27;</span>;<br>mysql&gt; flush <span class="hljs-keyword">privileges</span>;<br></code></pre></td></tr></table></figure>
+
+<h3 id="在Mycat服务器上连接并测试"><a href="#在Mycat服务器上连接并测试" class="headerlink" title="在Mycat服务器上连接并测试"></a>在Mycat服务器上连接并测试</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs gherkin"><span class="hljs-comment">#此时已完成Mycat读写分离，客户端主机访问Mycat主机</span><br>[root<span class="hljs-meta">@rhel</span> ~]<span class="hljs-comment"># mysql -uroot -p123456  -h 10.0.0.152 --default_auth=mysql_native_password</span><br>mysql&gt; use TESTDB;<br><span class="hljs-comment">#进行查询，读操作实际访问从节点</span><br>MySQL&gt; select @<span class="hljs-meta">@server_id;</span><br>+-------------+<br>|<span class="hljs-string"> @@server_id </span>|<br>+-------------+<br>|<span class="hljs-string">         157 </span>|<br>+-------------+<br><span class="hljs-comment">#修改数据，读操作实际访问主节点，可以在/var/lib/mysql/master.log中查看到相应记录</span><br><span class="hljs-comment">#需要先开启通用日志，持续生效可修改配置文件</span><br>[root<span class="hljs-meta">@centos8</span> ~]$mysql<br>mysql&gt; set global  general_log=1;<br><br><br><span class="hljs-comment">#停止从节点，Mycat自动调度读请求至主节点</span><br>[root<span class="hljs-meta">@centos8</span> ~]$systemctl stop mysqld<br>[root<span class="hljs-meta">@rhel</span> ~]<span class="hljs-comment"># mysql -uroot -p123456  -h 10.0.0.152 --default_auth=mysql_native_password</span><br>MySQL&gt; select @<span class="hljs-meta">@server_id;</span><br>+-------------+<br>|<span class="hljs-string"> @@server_id </span>|<br>+-------------+<br>|<span class="hljs-string">         150 </span>|<br>+-------------+<br><br><span class="hljs-comment">#从节点无法代替主节点</span><br></code></pre></td></tr></table></figure>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/mysql%E6%95%B0%E6%8D%AE%E5%BA%93/">mysql数据库</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/07/26/%E7%AC%AC%E4%B8%83%E5%91%A8%E4%BD%9C%E4%B8%9A-2022-7-27/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">第七周作业-2022-7-27</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/17/%E6%90%AD%E5%BB%BAchrony%E6%9C%8D%E5%8A%A1%E5%AE%8C%E6%88%90%E5%A4%9A%E4%B8%AA%E4%B8%BB%E6%9C%BA%E7%9A%84%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/">
+                        <span class="hidden-mobile">搭建chrony服务完成多个主机的时间同步</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
